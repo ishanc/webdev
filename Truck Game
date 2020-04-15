@@ -1,0 +1,250 @@
+Random Images
+
+<script language="Javascript" type="text/javascript" >
+
+window.onload = choosePic;
+	var myPix = new Array("https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_XI.png","https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_CI.png","https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_IN.png","https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_TYPE_43.png","https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_XD.png","https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_RANDOM.png");
+
+function choosePic() {
+	randomNum = Math.floor((Math.random() * myPix.length));
+	document.getElementById("myPicture").src = myPix[randomNum];
+}
+
+
+	</script>	
+<img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/Truck_XI.png" width="60%" height="100%" id="myPicture" />
+
+
+Colorfull Carousel
+
+<!--Moving colourful Carousel-->
+
+<link href="https://www.cssscript.com/demo/stacked-card-slider-swiper/dist/stackedCards.css" rel="stylesheet" />
+
+<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+
+	<style>
+		*, *:before, *:after {
+			box-sizing: border-box;
+		}
+		body {
+			color: #222;
+		}
+		#container { margin: 150px auto; }
+		html {
+			height: 100%;
+		}
+		body {
+			font-family: "Roboto", sans-serif;
+			width:  100%;
+			height: 100%;
+			min-height: 100%;
+			margin: 0px;
+			padding: 0px;
+			background-color: #fafafa;
+		}
+
+		.stacked-cards h2 {
+			text-align: center;
+			position: relative;
+			top: -20px;
+		}
+		.container-fuild {
+			max-width: 80%;
+			margin: 0 auto;
+		}
+
+		.container-fixed {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.divider {
+			max-width: 500px;
+			margin: 25px auto;
+			background-color: #ccc;
+			height: 2px;
+			width: 100%;
+		}
+
+		.stacked-cards {
+			padding-top: 40px;
+			padding-bottom: 15px;
+		}
+
+		.stacked-cards-fanOut {
+			padding-bottom: 40px;
+		}
+
+		.stacked-cards-fanOut li img {
+			max-height: 200px;
+		}
+
+		.stacked-cards li {
+			height: 250px;
+		}
+
+		@media (max-width: 767px) {
+			.stacked-cards li {
+				height: 180px;
+			}
+		}
+
+		.stacked-cards li {
+			background-color: #00bcd4;
+		}
+
+		.stacked-cards li:nth-child(n) {
+			background-color: #3599db;
+		}
+
+		.stacked-cards li:nth-child(2n) {
+			background-color: #e61b77;
+		}
+
+		.stacked-cards li:nth-child(3n) {
+			background-color: #00bcd4;
+		}
+
+		.myButton2 {
+	background-color:#f47521;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 20px;
+	text-decoration:none;
+	margin-left: 8px;
+}
+.myButton2:hover {
+	background-color:#e54e26;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  
+.radius{
+	border-radius: 10px !Important;
+}  
+
+.img-radius{
+border-top-left-radius: 10px !Important;
+border-top-right-radius: 10px !Important;
+}
+
+h1 { text-align: center;}
+	</style>
+
+
+
+
+
+<div class="container-fixed stacked-cards stacked-cards-fanOut">
+
+			<ul>
+				<li><img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/door/04.png" alt="Smiley face" height="100%" width="60%">
+					<a class="myButton2" onClick="setXI();choosePic();">SELECT</a>
+				</li>
+				<li><img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/door/03.png" alt="Smiley face" height="100%" width="60%">
+					<a class="myButton2" onClick="setCI();choosePic();">SELECT</a>
+				</li>
+				<li><img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/door/02.png" alt="Smiley face" height="100%" width="60%">
+					<a class="myButton2" onClick="setIN();choosePic();">SELECT</a>
+				</li>
+				<li><img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/px_game/door/01.png" alt="Smiley face" height="100%" width="60%">
+					<a class="myButton2" onClick="setTYPE_43();choosePic();">SELECT</a>
+				</li>
+
+			
+				<!-- Add more cards
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+-->
+			</ul>
+		</div>
+
+	<script src="https://www.cssscript.com/demo/stacked-card-slider-swiper/dist/stackedCards.min.js"></script>
+
+	<script>
+
+		var stackedCardFanOut = new stackedCards({
+		 	selector: '.stacked-cards-fanOut',
+		 	layout: "fanOut",
+		 	transformOrigin: "bottom",
+		 });
+
+		stackedCardFanOut.init();
+	</script>
+	
+	<script>
+	
+	function setXI () {
+		localStorage.removeItem('Truck_CI');
+		localStorage.removeItem('Truck_IN');
+		localStorage.removeItem('TYPE_43');
+		localStorage.removeItem('Truck_XD');
+		localStorage.removeItem('Truck_Random');
+		
+	localStorage.setItem("Truck_XI", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+}
+
+	function setCI () {
+		localStorage.removeItem('Truck_XI');
+		localStorage.removeItem('Truck_IN');
+		localStorage.removeItem('TYPE_43');
+		localStorage.removeItem('Truck_XD');
+		localStorage.removeItem('Truck_Random');
+	localStorage.setItem("Truck_CI", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+}
+
+	function setIN () {
+		localStorage.removeItem('Truck_CI');
+		localStorage.removeItem('Truck_XI');
+		localStorage.removeItem('TYPE_43');
+		localStorage.removeItem('Truck_XD');
+		localStorage.removeItem('Truck_Random');
+	localStorage.setItem("Truck_IN", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+}
+
+	function setTYPE_43 () {
+		localStorage.removeItem('Truck_CI');
+		localStorage.removeItem('Truck_IN');
+		localStorage.removeItem('Truck_XI');
+		localStorage.removeItem('Truck_XD');
+		localStorage.removeItem('Truck_Random');	
+	localStorage.setItem("TYPE_43", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+}
+		
+	function setXD () {
+		localStorage.removeItem('Truck_CI');
+		localStorage.removeItem('Truck_IN');
+		localStorage.removeItem('Truck_XI');
+		localStorage.removeItem('TYPE_43');
+		localStorage.removeItem('Truck_Random');
+	localStorage.setItem("Truck_XD", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+		
+}
+		
+	function setRandom () {
+		localStorage.removeItem('Truck_CI');
+		localStorage.removeItem('Truck_IN');
+		localStorage.removeItem('Truck_XI');
+		localStorage.removeItem('TYPE_43');
+		localStorage.removeItem('Truck_XD');
+	localStorage.setItem("Truck_Random", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+		
+}
+	</script>
