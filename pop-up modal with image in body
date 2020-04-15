@@ -1,0 +1,184 @@
+<!--Style-->
+
+<link rel="stylesheet" href="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/pop-up-css/bootstrap.min.css">
+
+<style>
+	
+	.card-title-new {
+		display: inline-block;
+		font-weight: bold;
+		text-align:left !Important;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #064F8E;
+		
+	}
+	.modal-body-new {
+		display: inline-block;
+		text-align: center;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size:12px;
+      border-radius:10px !Important;
+	}
+  	.card-text-new{
+		display: inline-block;
+		text-align: center;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size:14px;
+	}
+	.btn-primary-new {
+		display: inline-block;
+		text-align: center;
+		font-family: "BogleWeb Regular";
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	.myButton {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 20px;
+	text-decoration:none;
+	margin-right: 20px;
+}
+.myButton:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+  
+	.myButton2 {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 44px;
+	text-decoration:none;
+	margin-right: 8px;
+}
+.myButton2:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  
+.radius{
+	border-radius: 10px !Important;
+}  
+
+.img-radius{
+border-top-left-radius: 10px !Important;
+border-top-right-radius: 10px !Important;
+}
+
+	</style>
+
+<!--Style End-->
+
+<!--Bootstrap JS - BODY-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!--Bootstrap JS - BODY END-->
+
+<!--Body-->
+
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content radius"> 
+        <!-- Modal body -->
+        <div class="modal-body-new" style="border-radius: 10px;">
+           <div class="card radius">
+    <img class="card-img-top img-radius" src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/campaigns/98point6/2020_01_21_MyMoneybannersprinkles_title.jpg" alt="Card image">
+    <div class="card-body">
+
+		
+		
+      <!--AEM Column Component Start -->
+		
+		
+		<div class="columns-new-component clearfix col-new-2575">
+			<div class="dv-column"><div class="image parbase section">
+<div class="dv-img-component">
+    <div class=" image-alignment image-center" style="width:100%">
+        
+        
+            <img class="dv-component image-width comp-img" style="border-radius: 15px; margin: 24px 0px;" src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/campaigns/98point6/98point6icon.png" data-emptytext="Image" data-nomodal="false" >
+            <div class="modal-section"></div>
+        
+        <div>
+            <div class="caption image-width caption-alignment left caption-fontstyle  h4 caption-below" style="width:80%">
+                
+            </div>
+        </div>
+    </div>
+</div></div>
+
+</div>
+			<div class="dv-column"><div class="richtext parbase section">
+<div class="rte-styles richtext  table-component" style="text-align:justify !Important;" data-aa-richtext="ad296978-91f5-493b-bca4-d41268d75f2a/par/columns_new/column_2/richtext">
+    <p>With the <b>98point6</b> app, you get unlimited, on-demand care from the safety of your home. Just $20 per year and $1 per visit. Visit <a href="https://www.98point6.com" target="_blank" onClick="converted()"><b>98point6.com</b></a> to learn more.</p>
+
+</div></div>
+
+</div>
+
+		</div>
+		
+		      <!--AEM Column Component End -->
+
+		
+      <a href="https://www.98point6.com" target="_blank" class="myButton" onClick="converted()">Take me there</a><a href="#" class="myButton2" data-dismiss="modal">   Snooze   </a>
+    </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+<!--Body End-->
+
+<script type="text/javascript">
+window.onload = function() {
+$(function() {
+if (typeof Storage != "undefined") {
+
+if (localStorage.getItem("ME_98point6_Popup")==_satellite.getVar("adp_user_profile_wm-IdentificationNumber")) {
+console.log("Converted audience");}
+	else {
+if (sessionStorage.getItem("ME_98point6_Popup")==_satellite.getVar("adp_user_profile_wm-IdentificationNumber")) {
+console.log("Same session returning audience");}
+else {
+setTimeout(function() {
+$('#myModal').modal({show: true});
+}, 1400);
+
+
+sessionStorage.setItem("ME_98point6_Popup", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+}
+	}
+}});
+}
+function converted () {
+	localStorage.setItem("ME_98point6_Popup", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+  
+setTimeout(function() {
+$('#myModal').modal('hide');
+}, 1400);
+  
+}
+</script>
