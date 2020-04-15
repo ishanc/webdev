@@ -1,0 +1,155 @@
+<!--Style-->
+
+<link rel="stylesheet" href="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/pop-up-css/bootstrap.min.css">
+
+<style>
+	
+	.card-title-new {
+		display: inline-block;
+		font-weight: bold;
+		text-align:left !Important;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #064F8E;
+		
+	}
+	.modal-body-new {
+		display: inline-block;
+		text-align: center;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size:16px;
+      border-radius:10px !Important;
+	}
+  	.card-text-new{
+		display: inline-block;
+		text-align: center;
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size:16px;
+	}
+	.btn-primary-new {
+		display: inline-block;
+		text-align: center;
+		font-family: "BogleWeb Regular";
+		font-family: Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-right: 20px;
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+  
+	.myButton2 {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 44px;
+	text-decoration:none;
+	margin-right: 8px;
+}
+.myButton2:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  
+.radius{
+	border-radius: 10px !Important;
+}  
+
+.img-radius{
+border-top-left-radius: 10px !Important;
+border-top-right-radius: 10px !Important;
+}
+
+	</style>
+
+<!--Style End-->
+
+<!--Bootstrap JS-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-
+J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-
+Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-
+wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+<!--Bootstrap JS END-->
+
+<!--Modal Body-->
+<div class="container">
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content radius"> 
+        <!-- Modal body -->
+        <div class="modal-body-new" style="border-radius: 10px;">
+           <div class="card radius">
+    <img class="card-img-top img-radius" src="https://one.walmart.com/content/dam/gts-spark/home/me@/campaigns/pop-up/ME_Associate_contribution_campaign.png" alt="Card image">
+    <div class="card-body">
+      <h5 class="card-title-new">Time to Act against Coronavirus is Now!</h5>
+      <p class="card-text-new">Join hands with us today and contribute towards the <b>PM CARE Fund</b> to show your support towards our communities and save lives.<br><a href="https://ce.walmart.com/content/wal-paper/en_in/me/csr-associate-contribution.html?cid=ME_India_CSR_PM_Contribution" target="_blank"><b>Find out how you can make a difference.</b></a>
+</p>
+      <a href="https://surveysays.walmart.com/survey/prV2gV8rE" target="_blank" class="myButton" onClick="converted()">Contribute</a><a href="#" class="myButton2" data-dismiss="modal">Snooze</a>
+    </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+  
+  <!--Load JS-->
+  
+  <script type="text/javascript">
+window.onload = function() {
+$(function() {
+if (typeof Storage != "undefined") {
+
+if (localStorage.getItem("ME_PM_Popup")==_satellite.getVar("adp_user_profile_wm-IdentificationNumber")) {
+console.log("Converted audience");}
+	else {
+if (sessionStorage.getItem("ME_PM_Popup")==_satellite.getVar("adp_user_profile_wm-IdentificationNumber")) {
+console.log("Same session returning audience");}
+else {
+setTimeout(function() {
+$('#myModal').modal({show: true});
+}, 1400);
+
+
+sessionStorage.setItem("ME_PM_Popup", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+}
+	}
+}});
+}
+function converted () {
+	localStorage.setItem("ME_PM_Popup", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));
+  
+  setTimeout(function() {
+$('#myModal').modal('hide');
+}, 1400);
+  
+}
+</script>
