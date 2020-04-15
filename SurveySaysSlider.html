@@ -1,0 +1,64 @@
+<style>
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  right: 0;
+  background-color: #1188c8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffc220;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f79428;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)"   onclick="closeNav()">&#10140;</a>         
+  <iframe src="https://surveysays.walmart.com/survey/laa7PHws" height="100%" width="100%" frameborder="10"></iframe>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "350px";
+  document.getElementById("main").style.marginRight = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
+</script>
+
