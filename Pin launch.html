@@ -1,0 +1,108 @@
+<style>
+#snackbarfloat {
+  visibility: hidden;
+  min-width: 100px;
+  margin-left: -125px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  right: 0.5%;
+  bottom: 30px;
+  font-size: 15px;
+}
+
+#snackbarfloat.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+<!--Animated pin-->
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border-radius: 15px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  right: 0%;
+  bottom: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 9.5s;
+  animation: fadein 0.5s, fadeout 0.5s 9.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+  
+
+</style>
+
+<!--STATIC PIN BODY-->
+
+<div id="snackbarfloat"><a href = "/content/usone/en_us/company/news/top-stories/spark-heroes.html?cid=thankyoupin2020" target="_blank" style="color: white;"><img src="/content/dam/us-wire-wm1/images/me@/pin/Walmart_digital_pin.png"></a></div>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("snackbarfloat");
+  x.className = "show";
+  
+}
+</script>
+
+<!--ANIMATED PIN BODY-->
+
+<div id="snackbar" class= radius><a href = "/content/usone/en_us/company/news/top-stories/spark-heroes.html?cid=thankyoupin2020" target="_blank" style="color: white;"><img src="/content/dam/us-wire-wm1/images/me@/pin/new-badge_m.gif"></a></div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 10000);
+}
+</script>
+
+<!--PIN LAUNCH-->
+<script>
+  
+ window.onload = function() {
+$(function() {
+  setTimeout(function() {
+myFunction ();
+}, 6000);
+  
+    setTimeout(function() {
+myFunction2 ();
+}, 16000);
+});
+   
+   
+}
+</script>
