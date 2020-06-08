@@ -1,0 +1,183 @@
+<style>
+#snackbar {
+  visibility: hidden;
+  min-width: 350px;
+  min-height:235px;
+  margin-left: -125px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  right: 1%;
+  bottom: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+   background-image: url("/content/dam/us-wire-wm1/images/me@/chat/large_chat-box.svg");
+  background-repeat: no-repeat;
+  
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 14.5s;
+  animation: fadein 0.5s, fadeout 0.5s 14.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#snackbarfloat {
+  visibility: hidden;
+  min-width: 100px;
+  margin-left: -125px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  right: 0.5%;
+  bottom: 30px;
+  font-size: 15px;
+  
+}
+
+#snackbarfloat.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+
+.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:10px;
+	padding:6px 10px;
+	text-decoration:none;
+	margin-right: 20px;
+  float: right;
+  bottom: 30px;
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+  .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+<!-- BODY-->
+<a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;"><div id="snackbar" class= radius>
+  <a style="text-decoration: none;" class="myButton" onClick="dismiss()">&#10060</a>
+  </div></a>
+
+<script>
+  
+function dismiss() {
+ var x = document.getElementById("snackbar");
+x.className = x.className.replace("show", "");
+}
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 15000);
+}
+</script>
+
+<!--LOAD LOGIC-->
+<script>
+  
+ window.onload = function() {
+$(function() {
+  setTimeout(function() {
+myFunction ();
+}, 6000);
+  
+    setTimeout(function() {
+myFunction2 ();
+}, 21000);
+  
+  setTimeout(function(){ 
+    var x = document.getElementById("snackbarfloat");
+  x.className = x.className.replace("show", "");
+  }, 60000);
+ 
+    setTimeout(function() {
+myFunction ();
+}, 60001);
+  
+    setTimeout(function() {
+myFunction2 ();
+}, 75001);
+  
+});
+   
+   
+}
+</script>
