@@ -1,0 +1,100 @@
+<!--5050 block-->
+<style>
+  
+  .padding-imge{
+    padding:0px 0px 10px 20px;
+ 
+    width: 50%;
+   height:45px;
+    max-width:134px;
+  }
+.half-half-image-text{
+  padding: 70px 0px;
+  display:flex;
+  
+
+}
+  .content{
+    height: 320px;
+    display:flex;
+    width:100%;
+    display:flex;
+    align-items: center;
+ }
+  
+   
+  }
+  .img{
+
+    width:70%;
+    border-radius: 10px;
+  }
+}
+.half-half-image-text {
+  padding: 70px 20px;
+}
+.half-half-image-text h1 {
+  color: #800000;
+}
+.half-half-image-text .content {
+  height: 320px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  padding: 35px 20px;
+}
+.half-half-image-text .content p {
+  font-size: 22px;
+}
+.half-half-image-text .img {
+height: 320px;
+  width:100%;
+  border-radius: 10px;
+}
+
+
+</style>
+
+<!-- body starting span app container-->
+<span class="App-container">
+
+<div class="half-half-image-text">
+<div class="container">
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="content">
+
+  <p >
+<img src="/content/dam/us-wire-wm1/images/me@/mywalmartcares/images/thrive_logo.svg"  width="70%">
+<br><br>
+Thrive is here to empower you with real tools and tips from associates and experts on dealing with the stress of the new normal.
+<br>
+<b>Use your Walmart facility number as the Group Code for the app. For Home Office associates, use homeoffice as the Group Code.</b>
+<br><br>
+<a href="https://play.google.com/store/apps/details?id=com.zpchallenge.android&amp;hl=en_US"><img class="padding-imge" align="left" src="https://walmartisd.experiencecloud.adobe.com/content/dam/mac/walmartisd/play-badge@3x.png" ></a><a href="https://apps.apple.com/us/app/zp-challenge-better-choices/id1056010953"><img class="padding-imge" align="left" src="https://walmartisd.experiencecloud.adobe.com/content/dam/mac/walmartisd/apple-badge@3x.png"></a>
+<br><br><br>
+</p>
+        
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="img" style="background: url('http://one.walmart.com/content/dam/us-wire-wm1/images/me@/mywalmartcares/images/resource-caring@2x.jpg')no-repeat center;background-size:cover;"></div>
+ </div>
+  </div>
+</div>
+  </div>
+
+</span>
+
+<!-- add to primary style-->
+
+@media (min-width: 600px) {
+  p {
+   font-size:18px !important; 
+  }
+  @media screen and (max-width: 600px) {
+p {
+   font-size:4.5vw !important; 
+  }
