@@ -1,8 +1,10 @@
 <style>
+
+/*CHAT BIG BOX STYLE*/
+
 #snackbar {
   visibility: hidden;
   min-width: 350px;
-  min-height:235px;
   margin-left: -125px;
   text-align: center;
   border-radius: 2px;
@@ -13,7 +15,7 @@
   bottom: 30px;
   font-size: 20px;
   border-radius: 10px;
-   background-image: url("/content/dam/us-wire-wm1/images/me@/chat/large_chat-box.svg");
+   background-image: url("/content/dam/us-wire-wm1/images/me@/chat/large_chat-box_blank.svg");
   background-repeat: no-repeat;
   
 }
@@ -44,6 +46,8 @@
   to {bottom: 0; opacity: 0;}
 }
 
+/*CHAT ICON STYLE*/
+
 #snackbarfloat {
   visibility: hidden;
   min-width: 100px;
@@ -67,28 +71,7 @@
 }
 
 
-.myButton {
-	background-color:#76c043;
-	border-radius:28px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size:10px;
-	padding:6px 10px;
-	text-decoration:none;
-	margin-right: 20px;
-  float: right;
-  bottom: 30px;
-}
-.myButton:hover {
-	background-color:#54a546;
-	color:#ffffff;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+/*TOOL TIP STYLE*/
 
 .tooltip {
   position: relative;
@@ -130,11 +113,43 @@
   visibility: visible;
   opacity: 1;
 }
-</style>
 
-<!-- BODY-->
-<a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;"><div id="snackbar" class= radius>
-  <a style="text-decoration: none;" class="myButton" onClick="dismiss()">&#10060</a>
+/*BUTTON STYLE*/
+
+.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:10px;
+	padding:6px 10px;
+	text-decoration:none;
+	margin-right: 20px;
+   float: right;
+  margin-bottom: 50px;
+
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+  </style>
+  
+  <!--BODY BIG BOX-->
+  <a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;text-decoration: none;">
+  
+ <div id="snackbar" class= radius>
+  
+   <h6 style="padding-top:80px; color: white;"><b>Can't find what you're looking for?</b></h6><h6 style="color: white;"><b>Click here to chat with us</b></h6><p style="color: white;">Monday - Friday 7:30 am - 5:55 pm CST</p>
+   
+  <a style="text-decoration: none; " class="myButton" onClick="dismiss()">&#10060</a>
+
   </div></a>
 
 <script>
@@ -150,7 +165,20 @@ function myFunction() {
 }
 </script>
 
-<!--LOAD LOGIC-->
+  <!--CHAT ICON BODY-->
+  <div id="snackbarfloat"><div class="tooltip"><a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;"><img src="/content/dam/us-wire-wm1/images/me@/chat/chat_icon_g.png"></a>
+  <span class="tooltiptext">Monday - Friday 7:30 am - 5:55 pm CST</span>
+  </div></div>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("snackbarfloat");
+  x.className = "show";
+  
+}
+</script>
+
+<!--LAUNCH LOGIC-->
 <script>
   
  window.onload = function() {
