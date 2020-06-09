@@ -10,20 +10,20 @@
   border-radius: 2px;
   padding: 16px;
   position: fixed;
-  z-index: 999;
+  z-index: 999; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
   right: 1%;
   bottom: 30px;
   font-size: 20px;
   border-radius: 10px;
-   background-image: url("/content/dam/us-wire-wm1/images/me@/chat/large_chat-box_blank.svg");
+   background-image: url("/content/dam/us-wire-wm1/images/me@/chat/large_chat-box_blank.svg");/*LARGE CHAT BOX BACKGROUND IMAGE*/
   background-repeat: no-repeat;
   
 }
 
 #snackbar.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 14.5s;
-  animation: fadein 0.5s, fadeout 0.5s 14.5s;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 14.5s;	/*SET .5 SECS LESS THAN ACTUAL LOAD TIME IN THE LOAD LOGIC SECTION*/
+  animation: fadein 0.5s, fadeout 0.5s 14.5s;			/*SET .5 SECS LESS THAN ACTUAL LOAD TIME IN THE LOAD LOGIC SECTION*/
 }
 
 @-webkit-keyframes fadein {
@@ -148,17 +148,17 @@
   
    <h6 style="padding-top:80px; color: white;"><b>Can't find what you're looking for?</b></h6><h6 style="color: white;"><b>Click here to chat with us</b></h6><p style="color: white;">Monday - Friday 7:30 am - 5:55 pm CST</p>
    
-  <a style="text-decoration: none; " class="myButton" onClick="dismiss()">&#10060</a>
+  <a style="text-decoration: none; " class="myButton" onClick="dismiss()">&#10060</a> <!--RED X FOR DISMISSING THE CHAT BOX-->
 
   </div></a>
 
 <script>
   
-function dismiss() {
+function dismiss() { 		//FUNCTION TO DISMISS THE BIG CHAT BOX
  var x = document.getElementById("snackbar");
 x.className = x.className.replace("show", "");
 }
-function myFunction() {
+function myFunction() { //FUNCTION TO SHOW THE BIG CHAT BOX
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 15000);
@@ -166,12 +166,15 @@ function myFunction() {
 </script>
 
   <!--CHAT ICON BODY-->
-  <div id="snackbarfloat"><div class="tooltip"><a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;"><img src="/content/dam/us-wire-wm1/images/me@/chat/chat_icon_g.png"></a>
+  <div id="snackbarfloat"><div class="tooltip">
+  <a href = "http://honts1213a.homeoffice.wal-mart.com:8888/chatOnlyFaq/home?callCenterId=3&queue=WC_Benefits" target="_blank" style="color: white;">
+  <img src="/content/dam/us-wire-wm1/images/me@/chat/chat_icon_g.png">
+  </a>
   <span class="tooltiptext">Monday - Friday 7:30 am - 5:55 pm CST</span>
   </div></div>
 
 <script>
-function myFunction2() {
+function myFunction2() {		//FUNCTION TO SHOW THE CHAT ICON
   var x = document.getElementById("snackbarfloat");
   x.className = "show";
   
@@ -185,24 +188,24 @@ function myFunction2() {
 $(function() {
   setTimeout(function() {
 myFunction ();
-}, 6000);
+}, 6000); //Load the big box after 6 seconds
   
     setTimeout(function() {
 myFunction2 ();
-}, 21000);
+}, 21000);//Load the chat icon after 21 seconds
   
   setTimeout(function(){ 
     var x = document.getElementById("snackbarfloat");
   x.className = x.className.replace("show", "");
-  }, 60000);
+  }, 60000);//Hide the chat icon after 60 secs
  
     setTimeout(function() {
 myFunction ();
-}, 60001);
+}, 60001);//Show the big box after the chat icon is hidden
   
     setTimeout(function() {
 myFunction2 ();
-}, 75001);
+}, 75001);//Show the chat icon again
   
 });
    
