@@ -143,7 +143,7 @@ border-top-right-radius: 10px !Important;
 		      <!--AEM Column Component End -->
 
 		
-      <a href="https://www.98point6.com" target="_blank" class="myButton" onClick="converted()">Take me there</a><a href="#" class="myButton2" data-dismiss="modal">   Snooze   </a>
+      <a href="https://www.98point6.com" target="_blank" class="myButton" onClick="converted()" style="text-decoration: none;">Take me there</a><a href="#" class="myButton2" data-dismiss="modal" style="text-decoration: none;">   Snooze   </a>
     </div>
         </div>
       </div>      
