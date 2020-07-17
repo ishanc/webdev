@@ -45,6 +45,22 @@ margin-left: -350px; /* Negative half of width. */
 
   <!--Body End-->
 
+  <!--Body JS-->
+
+<script>
+  
+function dismissgreet() { 		//FUNCTION TO DISMISS THE BIG CHAT BOX
+ var x = document.getElementById("snackbargreet");
+x.className = x.className.replace("show", "");
+}
+function myFunctiongreet() { //FUNCTION TO SHOW THE BIG CHAT BOX
+  var x = document.getElementById("snackbargreet");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 30000);
+}
+</script>
+  <!--Body JS End-->
+
 <!--Launch JS-->
 
 <script>
