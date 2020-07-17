@@ -1,4 +1,4 @@
-  <!--Style-->
+ <!--Style-->
 
 <style>
 
@@ -27,18 +27,42 @@ margin-left: -350px; /* Negative half of width. */
 }
 .myButtongreet{
     cursor: pointer;
-    right: 5%;
+    right: 4%;
     top: 3%;
     position: absolute;
 }
-
+@media only screen and (max-width: 600px) {
+  #snackbargreet {
+  visibility: hidden;
+ 
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+  width:350px;
+  top: 50%;
+left: 50%;
+margin-top: -175px; /* Negative half of height. */
+margin-left: -175px; /* Negative half of width. */
+  font-size: 12px;
+  border-radius: 10px;
+}
+  .myButtongreet{
+    cursor: pointer;
+    right: 6%;
+    top: 5%;
+    position: absolute;
+}
+}
   </style>
   
     <!--Style End-->
   
+
   <!--Body-->
   <div id="snackbargreet">
-  <img src="/content/dam/gts-spark/home/me@/birthday-and-anniversary-pop-up/bday2.png" style="max-width:100%; max-height:100%; display: block;">
+  <img src="/content/dam/gts-spark/home/me@/birthday-and-anniversary-pop-up/bday2.png" style="max-width:100%; max-height:100%; display: block; border-radius:10px;">
   <a style="text-decoration: none; " class="myButtongreet" onClick="dismissgreet()">&#10060</a> <!--RED X FOR DISMISSING THE CHAT BOX-->
 
   </div>
