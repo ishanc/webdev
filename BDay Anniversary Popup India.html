@@ -119,3 +119,71 @@ if(fName[1]==short_months(today))
 	</script>
 	
 	<!--Launch JS 1 view End-->
+	
+	
+	<!--Launch JS Anniversary and Birthday 1 view-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(function() {
+  setTimeout(function() {
+launch_greeting ();
+}, 8000);
+	    });
+  })
+	 
+	
+	function launch_greeting(){
+	
+	  Date.shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function short_months(today)
+   { 
+     return Date.shortMonths[today.getMonth()]; 
+   }
+var today = new Date();//Get today's date
+var dd = String(today.getDate()).padStart(2, '0');//Get today's day
+var BDate = ContextHub.getItem("whrdata").BIRTH_DATE //Get Birth Date from whrdata from within context hub
+var ADate = ContextHub.getItem("whrdata").JOIN_DATE//Get Joining Date from whrdata from within context hub
+BDate = BDate.split("-");//Split the date by "-"
+ADate = ADate.split("-");//Split the date by "-"	  
+var b=parseInt(BDate);//Parse the date and convert it from string to number
+var a=parseInt(ADate);//Parse the date and convert it from string to number
+bDay=b+5;//Add 5 days to Birthday
+aDay=a+5;//Add 5 days to Anniversary
+
+	  //Birthday Check
+	  if (localStorage.getItem("BDay")==ContextHub.getItem("adp").sAMAccountName) { //Check if the greeting has been displayed before
+		  console.log("Seen Greeting");}
+	  else { //If the Birthday greeting has not been shown before
+if(BDate[1]==short_months(today)) //Check if it's Birthday Month
+{console.log("Birthday this month");
+	if(dd>=b && dd<=bDay) { //Check if it's Birthday in the last 5 days
+      console.log("Birthday this week");
+		myFunctiongreet();//Show the Birthday greeting
+		localStorage.setItem("BDay", ContextHub.getItem("adp").sAMAccountName);//Set local storage BDay Key with Samaccount name
+		
+	}
+}
+  }
+	  //Aniversary Check
+	  
+	  if (localStorage.getItem("ADay")==ContextHub.getItem("adp").sAMAccountName) { //Check if the greeting has been displayed before
+		  console.log("Seen Greeting");}
+	  else {	//If the Anniversary greeting has not been shown before
+if(ADate[1]==short_months(today))//Check if it's Anniversary Month
+{console.log("Anniversary this month");
+	if(dd>=a && dd<=aDay) {		//Check if it's Birthday in the last 5 days
+      console.log("Anniversary this week");
+		myFunctiongreetann(); //Show the Anniversary greeting
+		localStorage.setItem("ADay", ContextHub.getItem("adp").sAMAccountName);//Set local storage ADay Key with Samaccount name
+		
+	}
+}
+  }
+	}
+
+	</script>
+	
+	<!--Launch JS Anniversary and Birthday 1 view End-->
