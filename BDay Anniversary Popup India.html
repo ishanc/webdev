@@ -85,7 +85,7 @@ function myFunctiongreet() { //FUNCTION TO SHOW THE BIG CHAT BOX
 </script>
   <!--Body JS End-->
 
-<!--Launch JS-->
+<!--Launch JS 1 view-->
 
 <script>
   window.onload = function() {
@@ -101,15 +101,21 @@ var fName = ContextHub.getItem("whrdata").BIRTH_DATE
  fName = fName.split("-");
 	  var e=parseInt(fName);
 bDay=e+5;
-	  
+
+	  if (localStorage.getItem("BDay")==ContextHub.getItem("adp").sAMAccountName) {
+		  console.log("Seen Greeting");}
+	  else {
 if(fName[1]==short_months(today))
 {console.log("BDay this month");
-	if(dd>=e && dd<=bDay+5) {
+	if(dd>=e && dd<=bDay) {
       console.log("BDay this week");
 		myFunctiongreet();
+		localStorage.setItem("BDay", ContextHub.getItem("adp").sAMAccountName);
+		
 	}
 }
   }
+  }
 	</script>
 	
-	<!--Launch JS End-->
+	<!--Launch JS 1 view End-->
