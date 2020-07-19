@@ -179,36 +179,40 @@ function myFunction2() {		//FUNCTION TO SHOW THE CHAT ICON
   x.className = "show";
   
 }
-</script>
 
-<!--LAUNCH LOGIC-->
-<script>
+<!--Launch Code-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+ 
+<script> 
   
- window.onload = function() {
+   
+$(document).ready(function(){
 $(function() {
   setTimeout(function() {
 myFunction ();
-}, 6000); //Load the big box after 6 seconds
+}, 6000);
   
     setTimeout(function() {
 myFunction2 ();
-}, 21000);//Load the chat icon after 21 seconds
+}, 21000);
   
   setTimeout(function(){ 
     var x = document.getElementById("snackbarfloat");
   x.className = x.className.replace("show", "");
-  }, 60000);//Hide the chat icon after 60 secs
+  }, 60000);
  
     setTimeout(function() {
 myFunction ();
-}, 60001);//Show the big box after the chat icon is hidden
+}, 60001);
   
     setTimeout(function() {
 myFunction2 ();
-}, 75001);//Show the chat icon again
+}, 75001);
   
 });
    
    
-}
+})
 </script>
+<!--Launch Code End-->
