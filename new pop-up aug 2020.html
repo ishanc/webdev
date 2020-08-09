@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Style-->
+<style>
+#snackbargreet {
+	visibility: hidden;
+	text-align: center;
+	border-radius:15px; 
+	padding: 0px;
+	position: fixed;
+	z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+	width: 480px;
+	top: 40%;
+	left: 50%;
+	margin-top: -240px; /* Negative half of height. */
+	margin-left: -240px; /* Negative half of width. */
+	display:block;
+	box-shadow: 2px 2px 8px 5px #888888;
+	background-color:white;
+}
+#snackbargreet p {
+		font-size:2.0vh;
+		padding:15px;
+	}
+#snackbargreet.show {
+	visibility: visible;
+ 
+}
+	div.banner{
+		min-width:481px; 
+		overflow:hidden; 
+		border-top-right-radius:15px; 
+		border-top-left-radius:15px;
+	}
+@media screen and (max-width: 600px) {
+	
+	div.banner {
+		min-width:341px; 
+	}
+	#snackbargreet {
+		visibility: hidden;
+ 		text-align: center;
+		padding: 0px;
+		position: fixed;
+		z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+		width:340px;
+		top: 30%;
+		left: 50%;
+		margin-top: -170px; /* Negative half of height. */
+		margin-left: -170px; /* Negative half of width. */
+		font-size: 200% !important;
+		border-radius: 15px;
+	}
+	#snackbargreet p {
+		font-size:2.0vh;
+		padding:15px;
+	}
+	#snackbargreet h1 {
+		font-size:4.0vh;
+		padding-left:15px;
+		padding-right:15px;
+	}
+  #snackbargreet h2 {
+		font-size:3.0vh;
+	  padding-left:15px;
+		padding-right:15px;
+	}
+}
+	#blur {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	content: ' ';
+    	visibility: hidden;
+  		background: rgba(255, 255, 255, 0.2); 
+  		backdrop-filter: blur(8px); 
+  		height: 100vh;
+		width: 100%;
+		z-index: 2147483638;
+  	}
+	#blur.show {
+		visibility: visible;
+		
+	}
+	.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-right: 20px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	width: 140.84px;
+	height:36px;
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+	.myButton2 {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 44px;
+	text-decoration:none;
+	margin-right: 8px;
+	margin-bottom: 30px;
+	width: 140.84px;
+	height:36px;
+}
+.myButton2:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  </style>
+    <!--Style End-->
+</head>
+<body>	  
+ <div id="blur" onclick="dismissgreet()"></div> <!-- Blur background and dismiss modal on click-->
+	  <!--Body-->
+<div id="snackbargreet">	  
+<div class="banner">
+  <img src="https://one.walmart.com/content/dam/gts-spark/home/me@/campaigns/pop-up/ME_Associate_contribution_campaign.png" style="width: 100%; height:100%; object-fit:scale-down;">
+</div>
+	<h1>The quick brown fox jumps over the lazy dog</h1>
+	<h2>The quick brown fox jumps over the lazy dog</h2>
+	<p>The quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dog</p>	
+	<a href="https://surveysays.walmart.com/survey/prV2gV8rE" target="_blank" class="myButton" onClick="converted()" style="text-decoration: none;">CTA</a><a href="javascript:void(0)" class="myButton2" onclick="dismissgreet()" style="text-decoration: none;">Snooze</a>
+</div>
+<!--Body End-->
+<!--Body JS-->
+<script>
+function dismissgreet() {
+ 	var x = document.getElementById("snackbargreet");
+	x.className = x.className.replace("show", "");
+	var y = document.getElementById("blur");
+	y.className = y.className.replace("show", "");
+}	
+function myFunctiongreet() { //FUNCTION TO SHOW THE BIG CHAT BOX
+if (typeof Storage != "undefined") {
+	if (localStorage.getItem("ME_P2_Popup")==ContextHub.getItem("adp").sAMAccountName) {
+		console.log("Converted audience");}
+	else {
+		if (sessionStorage.getItem("ME_P2_Popup")==ContextHub.getItem("adp").sAMAccountName) {
+			console.log("Same session returning audience");}
+			else {
+				var x = document.getElementById("snackbargreet");
+  				x.className = "show";
+				var y = document.getElementById("blur");
+  				y.className = "show";
+ 				sessionStorage.setItem("ME_P2_Popup", ContextHub.getItem("adp").sAMAccountName);
+				}
+		}
+	}
+}
+setTimeout(function() { //Delay 7 seconds before greeting function once DOM is loaded
+	myFunctiongreet ();
+}, 7000);
+function converted () {
+	localStorage.setItem("ME_P2_Popup",ContextHub.getItem("adp").sAMAccountName);
+	setTimeout(function() {
+		dismissgreet();
+		}, 1400);
+}
+</script>
+</body>
+</html>
