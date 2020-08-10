@@ -1,0 +1,124 @@
+<style>
+
+#snackbargreet {
+  visibility: hidden;
+ 
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+  width:700px;
+  top: 50%;
+left: 50%;
+margin-top: -350px; /* Negative half of height. */
+margin-left: -350px; /* Negative half of width. */
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#snackbargreet.show {
+  visibility: visible;
+ 
+}
+.myButtongreet{
+    cursor: pointer;
+    right: 4%;
+    top: 3%;
+    position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  #snackbargreet {
+  visibility: hidden;
+ 
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+  width:350px;
+  top: 50%;
+left: 50%;
+margin-top: -175px; /* Negative half of height. */
+margin-left: -175px; /* Negative half of width. */
+  font-size: 12px;
+  border-radius: 10px;
+}
+  .myButtongreet{
+    cursor: pointer;
+    right: 6%;
+    top: 5%;
+    position: absolute;
+}
+}
+  </style>
+  
+  <!--Body-->
+  <div id="snackbargreet">
+  <img src="/content/dam/gts-spark/home/me@/birthday-and-anniversary-pop-up/wa2.png" style="max-width:100%; max-height:100%; display: block; border-radius:10px;">
+  <a style="text-decoration: none; " class="myButtongreet" onClick="dismissgreet()">&#10060</a> <!--RED X FOR DISMISSING THE CHAT BOX-->
+
+  </div>
+
+  <!--Body End-->
+  
+  <!--body JS-->
+  <script>
+  
+function dismissgreet() { 		//FUNCTION TO DISMISS THE BIG CHAT BOX
+ var x = document.getElementById("snackbargreet");
+x.className = x.className.replace("show", "");
+}
+function myFunctiongreetann() { //FUNCTION TO SHOW THE BIG CHAT BOX
+  var x = document.getElementById("snackbargreet");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 60000);
+}
+</script>
+ <!--body JS End-->
+ 
+<!--Launch JS Anniversary-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>	
+$(document).ready(function(){//Check if DOM is loaded
+$(function() {
+setTimeout(function() { //Delay 7 seconds before greeting function once DOM is loaded
+launch_greeting ();
+}, 7000);
+});
+})	
+function launch_greeting(){ //Launch Greeting main function
+var date = new Date();
+var mm = date.getMonth()+1;//Get current Month
+var dd = date.getDate();//Get today's date
+var ADate = _satellite.getVar("adp_user_profile_wm-HireDate")//Get Joining Date  
+var m = ADate.charAt(4)+ADate.charAt(5);//Get month of joining
+	var m = parseInt(m);
+var d = ADate.charAt(6)+ADate.charAt(7);//Get date of joining
+	var d = parseInt(d);
+aDay=d+5;//Add 5 days to Anniversary
+	  
+	  //Aniversary Check
+function anniversary(){
+console.log("Anniversary in "+m);//show the month of anniversary for test	
+console.log("Anniversary on "+d);//Show the date of anniversary for test
+if(m==mm)//Check if it's Anniversary Month
+{console.log("Anniversary this month");
+
+if(dd>=d && dd<=aDay) {		//Check if it's Birthday in the last 5 days
+console.log("Anniversary this week");
+
+myFunctiongreetann(); //Show the Anniversary greeting
+localStorage.setItem("ADay", ContextHub.getItem("adp").sAMAccountName);//Set local storage ADay Key with Samaccount name	
+}
+	}
+		}	
+if (localStorage.getItem("ADay")==ContextHub.getItem("adp").sAMAccountName) { //Check if the greeting has been displayed before
+console.log("Seen Greeting");}
+else {	//If the Anniversary greeting has not been shown before
+anniversary();
+	}
+		}
+	</script>
+	
+	<!--Launch JS Anniversary End-->
