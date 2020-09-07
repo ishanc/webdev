@@ -1,0 +1,87 @@
+<style>
+#snackbarfloat {
+  visibility: hidden;
+  min-width: 100px;
+  margin-left: -125px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  right: 0.5%;
+  bottom: 30px;
+  font-size: 15px;
+}
+
+#snackbarfloat.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+  
+  @-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+  
+  .closebtn {
+        position: absolute;
+        top: 8;
+     right: 10%;
+    cursor: pointer;
+        }
+
+</style>
+
+<!--STATIC PIN BODY-->
+
+<div id="snackbarfloat">
+
+  <a href = "https://one.walmart.com/content/wal-paper/en_in/spark-of-technology.html?cid=SOT-Launch_PIN" target="_blank" style="color: white;"><img src="/content/dam/gts-spark/spark-of-technology-weekly-bytes/pop-up-assets/SoT_visit%20logo.png" width="212"></a>
+ 
+    <a style="text-decoration: none; " class="closebtn" onClick="dismiss()">&#10060</a> 
+  
+</div>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("snackbarfloat");
+  x.className = "show";
+  
+}
+</script>
+
+<!--PIN LAUNCH-->
+<script>
+  
+ window.onload = function() {
+$(function() {
+  
+    setTimeout(function() {
+myFunction2 ();
+}, 6000);
+});
+   
+   
+}
+ function dismiss() { 		//FUNCTION TO DISMISS THE BIG CHAT BOX
+ var x = document.getElementById("snackbarfloat");
+x.className = x.className.replace("show", "");
+}
+</script>
