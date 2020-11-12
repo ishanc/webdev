@@ -1,0 +1,100 @@
+<style>
+#mySidenavchat {
+  height: 70%;
+  width: 0;
+  position: fixed;
+  z-index: 2147483647;
+  bottom: 10%;
+  right: 0;
+  background-color: #1188c8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius:10px;
+  margin-right: 20px;
+}
+  #mySidenavchat.show {
+  width:30%;
+  }
+
+#mySidenavchat a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffc220;
+  display: block;
+  transition: 0.3s;
+}
+
+#mySidenavchat a:hover {
+  color: #f79428;
+}
+
+#mySidenavchat .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+  #mySidenavchat p {
+     margin: 0px 0px 0px !important;
+    font-size:15px;
+    padding:2px;
+}
+.containerbackground { 
+           
+            position: absolute; 
+    top: 40%;
+    left: 28%;
+            z-index: -1; 
+            color: white; 
+  font-size:28px;
+        } 
+
+@media only screen and (max-width: 600px) {
+  #mySidenavchat {
+    padding-top: 15px;
+    margin-right: 20px;
+    font-size: 18px;
+    height: 80%;
+  }
+  #mySidenavchat.show {
+  width:90% !important;
+  }
+  #mySidenavchat a {
+  font-size: 18px;
+}
+}
+</style>
+
+<div id="mySidenavchat" class="sidenavchat">
+<a href="javascript:void(0)"   onclick="closeNavchat()">&#10140;</a> 
+  <div class="containerbackground"> 
+            Loading... 
+        </div> 
+  <iframe id="livechat" src="" height="85%" width="100%" frameborder="0"></iframe>
+	    <div><p style="color:white; text-align:center;">For any assistance related to live chat, please contact 000-000-0000</p> </div>
+	
+</div>
+
+<script>
+setTimeout(function() {  
+localStorage.setItem("winNum", _satellite.getVar("adp_user_profile_wm-IdentificationNumber"));  
+ 
+
+},2000);
+function openNavchat() {
+ var fuName = ContextHub.getItem("adp").displayName
+  fuName = fuName.split(" ");
+document.getElementById("livechat").src ="https://home-c7.incontact.com/incontact/chatclient/chatclient.aspx?poc=0122cd50-995a-4b4c-b9c4-ba6a6e0750f9&bu=4597947&"+"P0="+fuName[0]+"%20"+fuName[1]+"&P1="+localStorage.getItem("winNum");  
+  
+  var x = document.getElementById("mySidenavchat");
+ x.className = "show";
+}
+
+function closeNavchat() {
+  var x = document.getElementById("mySidenavchat");
+x.className = x.className.replace("show", "");
+}
+</script>

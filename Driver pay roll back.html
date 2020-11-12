@@ -1,0 +1,257 @@
+<!--Style-->
+<style>
+#payadjbody {
+	visibility: hidden;
+	text-align: center;
+	border-radius:15px; 
+	padding: 0px;
+	position: fixed;
+	z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+	width: 640px;
+	top: 44%;
+	left: 50%;
+	margin-top: -320px; /* Negative half of height. */
+	margin-left: -320px; /* Negative half of width. */
+	display:block;
+	box-shadow: 2px 2px 7px 2px #888888;
+	background-color:white;
+}
+#payadjbody p {
+		font-size:2.0vh;
+		
+	}
+  #payadjbody h3{
+  margin-top:0px;
+  }
+#payadjbody.show {
+	visibility: visible;
+ 
+}
+	div.banner{
+		min-width:481px; 
+		overflow:hidden; 
+		border-top-right-radius:15px; 
+		border-top-left-radius:15px;
+	}
+@media screen and (max-width: 600px) {
+	
+	div.banner {
+		min-width:341px; 
+	}
+	#payadjbody {
+		visibility: hidden;
+ 		text-align: center;
+		padding: 0px;
+		position: fixed;
+		z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+		width:340px;
+		top: 30%;
+		left: 50%;
+		margin-top: -170px; /* Negative half of height. */
+		margin-left: -170px; /* Negative half of width. */
+		font-size: 200% !important;
+		border-radius: 15px;
+	}
+	#payadjbody p {
+		font-size:2.0vh;
+	}
+	#payadjbody h1 {
+		font-size:4.0vh;
+		padding-left:15px;
+		padding-right:15px;
+	}
+  #payadjbody h2 {
+		font-size:3.0vh;
+	  padding-left:15px;
+		padding-right:15px;
+	}
+}
+	#blur {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	content: ' ';
+    	visibility: hidden;
+  		background: rgba(255, 255, 255, 0.2); 
+  		backdrop-filter: blur(8px); 
+  		height: 100vh;
+		width: 100%;
+		z-index: 2147483638;
+  	}
+	#blur.show {
+		visibility: visible;
+		
+	}
+	.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-right: 20px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	width: 140.84px;
+	height:36px;
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+	.myButton2 {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 44px;
+	text-decoration:none;
+	margin-right: 8px;
+	margin-bottom: 28px;
+      margin-top: 14px;
+	width: 58%;
+	height:36px;
+}
+.myButton2:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  </style>
+    <!--Style End-->
+
+<!--BODY-->
+
+<!--Body-->
+<div id="blur" onclick="dismisspayadj()"></div> <!-- Blur background and dismiss modal on click-->
+	
+<div id="payadjbody">	  
+<div class="banner">
+  <img src="http://one.walmart.com/content/dam/us-wire-wm1/images/me%40/campaigns-2020/september-2020/alert1.jpg" style="width: 100%; height:100%; object-fit:scale-down;">
+</div>
+	
+	<center><h1 id="hero-title" style="padding: 10px">Welcome</h1>
+	<h3><b><span style="color:#FFB81C;">⚠</span> Pending Action <span style="color:#FFB81C;">⚠</span> </b></h3>
+	<p>A recent system error resulted in a duplicate incentive payout and we need to reverse the payment.</p><p>
+Please take a moment to sign the Driver Repayment form by clicking on the link provided before Wednesday Oct. 7.</p><p>The form will allow us to reverse the payment on your next paycheck, dated Oct. 15.
+</p><p>We sincerely apologize for any inconvenience the error may have caused you.</p><p>
+    Check out the Frequently Asked Questions <a href="https://one.walmart.com/content/uswire/en_us/me/external/driver_faq.html" target="_blank">here</a>.</p><p>
+       
+      <i><strong>Already completed? No problem. No further action is needed. Click <a id="dismisstext" href="javascript:void(0)"  onclick="dismisspayadj()">here</a> to close. </strong></i>
+</p></center>
+	
+	<a id="paylink" href="javascript:void(0)" target="_blank" class="myButton2" onclick="dismisspayadj()" style="text-decoration: none;">Take me there</a>
+</div>
+<!--Body End-->
+
+
+<!-- JS for name-->
+
+<script>
+
+  var fName = ContextHub.getItem("adp").displayName;
+  fName = fName.split(" ");
+     if (fName != '')
+  {
+  document.getElementById("hero-title").innerHTML = "Welcome " +fName[0];
+  }
+     
+        </script>
+        
+        
+        <!--URL BUILDER-->
+        
+<!-- URL Generator-->
+<script>
+var myvar = [];
+var rep;
+var repcontent;
+var keyValuePair;
+ 
+ 
+jQuery.get('https://one.walmart.com/content/dam/themepage/files/af_rgb.csv', function(data) {
+myvar = data;
+ 
+ 
+ 
+ 
+rep = myvar.replace(/[\r\n]+/gm, ",");
+ 
+repcontent = rep;
+ 
+keyValuePair = repcontent.replace( /,([^,]+(,|$))/g, ':$1');
+ 
+var attrs = keyValuePair
+ 
+  var keysValuesArray = attrs.split(',');
+ 
+ 
+  var attrsObject = {};
+ 
+  for (var i = keysValuesArray.length - 1; i >= 0; i--) {
+ 
+    var keyValueArray = keysValuesArray[i].split(':');
+    // Ex: keyValueArray = ["JOB", "PRESIDENT"]
+ 
+    attrsObject[keyValueArray[0]] = keyValueArray[1];
+ 
+  }
+ 
+var fName = ContextHub.getItem("adp").displayName //_satellite.getVar("adp_user_profile_Display_Name");
+
+
+var wID = ContextHub.getItem("adp")["wm-IdentificationNumber"] //_satellite.getVar("adp_user_profile_Display_Name");
+ 
+  var url1 = "https://walmart.na3.echosign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCJK5PIxT4RacYdYLwGti_zC4_C3kokNdUTNQgUWs6jFmMJsh_erFnT2k6qYJqEwDc*#Repayment_Amount=" + attrsObject[wID].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + "&Signer_Name="+ fName + "&WIN_Number=" + wID
+ 
+
+ 
+	document.getElementById("paylink").href = url1;
+	
+console.log(url1);
+});
+
+
+</script>
+
+<!--LAUNCH-->
+
+<script>
+  
+  setTimeout(function() { //Delay 7 seconds before greeting function once DOM is loaded
+var x = document.getElementById("payadjbody");
+x.className = "show";
+	  
+var y = document.getElementById("blur");
+ y.className = "show";	  
+	  
+}, 7000);
+  
+  
+  function dismisspayadj() {
+    
+    setTimeout(function() {
+ 	var x = document.getElementById("payadjbody");
+	x.className = x.className.replace("show", "");
+		
+		var y = document.getElementById("blur");
+		y.className = y.className.replace("show", "");
+  }, 1400);
+	  
+  }
+  </script>

@@ -1,32 +1,27 @@
-<!doctype html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Style-->
 <style>
-#pop_up {
+#popupbody {
 	visibility: hidden;
 	text-align: center;
 	border-radius:15px; 
 	padding: 0px;
 	position: fixed;
 	z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
-	width: 480px;
+	width: 600px;
 	top: 40%;
 	left: 50%;
-	margin-top: -240px; /* Negative half of height. */
-	margin-left: -240px; /* Negative half of width. */
+	margin-top: -300px; /* Negative half of height. */
+	margin-left: -300px; /* Negative half of width. */
 	display:block;
-	box-shadow: 2px 2px 8px 5px #888888;
-	background-color:white;
+	box-shadow: 2px 2px 7px 2px #888888;
+	background-color:#052042;
 }
-#pop_up p {
+#popupbody p {
 		font-size:2.0vh;
 		padding:15px;
 	}
-#pop_up.show {
+#popupbody.show {
 	visibility: visible;
-
+ 
 }
 	div.banner{
 		min-width:481px; 
@@ -35,11 +30,11 @@
 		border-top-left-radius:15px;
 	}
 @media screen and (max-width: 600px) {
-
+	
 	div.banner {
 		min-width:341px; 
 	}
-	#pop_up {
+	#popupbody {
 		visibility: hidden;
  		text-align: center;
 		padding: 0px;
@@ -53,16 +48,16 @@
 		font-size: 200% !important;
 		border-radius: 15px;
 	}
-	#pop_up p {
+	#popupbody p {
 		font-size:2.0vh;
 		padding:15px;
 	}
-	#pop_up h1 {
+	#popupbody h1 {
 		font-size:4.0vh;
 		padding-left:15px;
 		padding-right:15px;
 	}
-  #pop_up h2 {
+  #popupbody h2 {
 		font-size:3.0vh;
 	  padding-left:15px;
 		padding-right:15px;
@@ -84,10 +79,10 @@
   	}
 	#blur.show {
 		visibility: visible;
-
+		
 	}
 	.myButton {
-	background-color:#76c043;
+	background-color:#0071ce;
 	border-radius:28px;
 	display:inline-block;
 	cursor:pointer;
@@ -99,11 +94,12 @@
 	margin-right: 20px;
 	margin-left: 10px;
 	margin-bottom: 30px;
-	width: 140.84px;
+      margin-top:20px;
+	width: 210.84px;
 	height:36px;
 }
 .myButton:hover {
-	background-color:#54a546;
+	background-color:#064f8e;
 	color:#ffffff;
 }
 .myButton:active {
@@ -111,7 +107,7 @@
 	top:1px;
 }
 	.myButton2 {
-	background-color:#0f1c2c;
+	background-color:#76c043;
 	border-radius:28px;
 	display:inline-block;
 	cursor:pointer;
@@ -122,11 +118,12 @@
 	text-decoration:none;
 	margin-right: 8px;
 	margin-bottom: 30px;
-	width: 140.84px;
+      margin-top:20px;
+	width: 210.84px;
 	height:36px;
 }
 .myButton2:hover {
-	background-color:#0071ce;
+	background-color:#54a546;
 	color:#ffffff;
 }
 .myButton2:active {
@@ -134,55 +131,44 @@
 	top:1px;
 }
   </style>
-    <!--Style End-->
-</head>
-<body>	  
- <div id="blur" onclick="dismiss_popup()"></div> <!-- Blur background and dismiss modal on click-->
+  
+  <div id="blur" onclick="dismiss_popup()"></div> <!-- Blur background and dismiss modal on click-->
 	  <!--Body-->
-<div id="pop_up">	  
+<div id="popupbody">	  
 <div class="banner">
-  <img src="https://one.walmart.com/content/dam/gts-spark/home/me@/campaigns/pop-up/ME_Associate_contribution_campaign.png" style="width: 100%; height:100%; object-fit:scale-down;">
-</div>
-	<h1>The quick brown fox jumps over the lazy dog</h1>
-	<h2>The quick brown fox jumps over the lazy dog</h2>
-	<p>The quick brown fox jumps over the lazy dogThe quick brown fox jumps over the lazy dog</p>	
-	<a href="https://surveysays.walmart.com/survey/prV2gV8rE" target="_blank" class="myButton" onClick="converted()" style="text-decoration: none;">CTA</a><a href="javascript:void(0)" class="myButton2" onclick="dismiss_popup()" style="text-decoration: none;">Snooze</a>
+<img src="/content/dam/gts-spark/home/me@/pop-up/ME-site_Pop-up-Revised-1.jpg" style="width:100%; height:100%;">	
+	<a href="https://one.walmart.com/content/wal-paper/en_in/me.html" target="_blank" class="myButton" onClick="dismiss_popup()" style="text-decoration: none;">Access on the ME site</a><a href="https://walmart.enterprise.slack.com/?redir=%2Fr-t2152601087%3Fredir%3D%252Fapp_redirect%253Fapp%253DABRK9HSQL" class="myButton2" onclick="dismiss_popup()" target="_blank" style="text-decoration: none;">Access on Slack</a>
 </div>
 <!--Body End-->
-<!--Body JS-->
+
 <script>
 function dismiss_popup() {
- 	var x = document.getElementById("pop_up");
+ 	setTimeout(function() {
+	var x = document.getElementById("popupbody");
 	x.className = x.className.replace("show", "");
 	var y = document.getElementById("blur");
 	y.className = y.className.replace("show", "");
+		}, 1200);
 }	
-function load_popup() { //FUNCTION TO SHOW THE BIG CHAT BOX
+function launch_popup() { //FUNCTION TO SHOW THE BIG CHAT BOX
 if (typeof Storage != "undefined") {
-	if (localStorage.getItem("ME_P2_Popup")==ContextHub.getItem("adp").sAMAccountName) {
+	if (localStorage.getItem("AskME_Popup")==ContextHub.getItem("adp").sAMAccountName) {
 		console.log("Converted audience");}
 	else {
-		if (sessionStorage.getItem("ME_P2_Popup")==ContextHub.getItem("adp").sAMAccountName) {
+		if (sessionStorage.getItem("AskME_Popup")==ContextHub.getItem("adp").sAMAccountName) {
 			console.log("Same session returning audience");}
 			else {
-				var x = document.getElementById("pop_up");
+				var x = document.getElementById("popupbody");
   				x.className = "show";
 				var y = document.getElementById("blur");
   				y.className = "show";
- 				sessionStorage.setItem("ME_P2_Popup", ContextHub.getItem("adp").sAMAccountName);
+ 				sessionStorage.setItem("AskME_Popup", ContextHub.getItem("adp").sAMAccountName);
 				}
 		}
 	}
 }
 setTimeout(function() { //Delay 7 seconds before greeting function once DOM is loaded
-	load_popup ();
+	launch_popup ();
 }, 7000);
-function converted () {
-	localStorage.setItem("ME_P2_Popup",ContextHub.getItem("adp").sAMAccountName);
-	setTimeout(function() {
-		dismiss_popup();
-		}, 1400);
-}
+
 </script>
-</body>
-</html>

@@ -1,0 +1,283 @@
+<style>
+  #walmartembed_workday {
+  display:none;
+  }
+    #walmartembed_workday.show {
+  display:inline;
+  }
+  
+    #walmartembed_nonworkday {
+  display:none;
+  }
+      #walmartembed_nonworkday.show {
+   display:inline;
+  }
+  
+#addupdate {
+	visibility: hidden;
+	text-align: center;
+	border-radius:15px; 
+	padding: 0px;
+	position: fixed;
+	z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+	width: 480px;
+	top: 40%;
+	left: 50%;
+	margin-top: -240px; /* Negative half of height. */
+	margin-left: -240px; /* Negative half of width. */
+	display:block;
+	box-shadow: 2px 2px 7px 2px #888888;
+	background-color:white;
+}
+#addupdate p {
+		font-size:2.0vh;
+		padding:15px;
+	}
+#addupdate.show {
+	visibility: visible;
+ 
+}
+	div.banner{
+		min-width:481px; 
+		overflow:hidden; 
+		border-top-right-radius:15px; 
+		border-top-left-radius:15px;
+	}
+@media screen and (max-width: 600px) {
+	
+	div.banner {
+		min-width:341px; 
+	}
+	#addupdate {
+		visibility: hidden;
+ 		text-align: center;
+		padding: 0px;
+		position: fixed;
+		z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+		width:340px;
+		top: 30%;
+		left: 50%;
+		margin-top: -170px; /* Negative half of height. */
+		margin-left: -170px; /* Negative half of width. */
+		font-size: 200% !important;
+		border-radius: 15px;
+	}
+	#addupdate p {
+		font-size:2.0vh;
+		padding:15px;
+	}
+	#addupdate h1 {
+		font-size:4.0vh;
+		padding-left:15px;
+		padding-right:15px;
+	}
+  #addupdate h2 {
+		font-size:3.0vh;
+	  padding-left:15px;
+		padding-right:15px;
+	}
+}
+	#blur {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	content: ' ';
+    	visibility: hidden;
+  		background: rgba(255, 255, 255, 0.2); 
+  		backdrop-filter: blur(8px); 
+  		height: 100vh;
+		width: 100%;
+		z-index: 2147483638;
+  	}
+	#blur.show {
+		visibility: visible;
+		
+	}
+	.myButton {
+	background-color:#76c043;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-right: 20px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	width: 140.84px;
+	height:36px;
+}
+.myButton:hover {
+	background-color:#54a546;
+	color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+	.myButton2 {
+	background-color:#0f1c2c;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Bogle,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	padding:6px 44px;
+	text-decoration:none;
+	margin-right: 8px;
+	margin-bottom: 30px;
+	width: 140.84px;
+	height:36px;
+}
+.myButton2:hover {
+	background-color:#0071ce;
+	color:#ffffff;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+  </style>
+    <!--Style End-->
+    
+    
+    <div id="blur" onclick="dismissadd()"></div> <!-- Blur background and dismiss modal on click-->
+<div id="addupdate">       
+<div class="banner">
+  <img src="https://one.walmart.com/content/dam/us-wire-wm1/images/me@/campaigns-2020/august-2020/image2.png" style="width: 100%; height:100%; object-fit:scale-down;">
+</div>
+ 
+	<!-- WORKDAY START -->
+<div id="walmartembed_workday">
+    <div class="region region-content">
+    <div id="block-walmartembed-page-title">
+ 
+ 
+<center><h1 id="hero-title" style="padding: 10px">Welcome</h1>
+<h4 class="title">Do we have your correct address?</h4></center>
+     
+  
+ 
+ 
+  </div>
+<div id="block-walmartembed-content" class="block block-system block-system-main-block" style="padding: 10px">
+ 
+    
+      <center><h5>You can check your address <a href="https://one.walmart.com/content/uswire/en_us/me/link-page/address-update-workday.html?cid=ME_Workday_Address-Update_Popup" target="_blank"  onclick="converted ()">HERE</a></h5></center>
+ 
+ 
+  </div>
+ 
+  </div>
+ 
+</div>
+	<!-- WORKDAY END -->
+	
+	<!-- NON WORKDAY START -->
+	
+	<div id="walmartembed_nonworkday">
+    <div class="region region-content">
+    <div id="block-walmartembed-page-title">
+ 
+ 
+<center><h1 id="hero-title_nwd" style="padding: 10px">Welcome</h1>
+<h4 class="title">Do we have your correct address?</h4></center>
+     
+  
+ 
+ 
+  </div>
+<div id="block-walmartembed-content" class="block block-system block-system-main-block" style="padding: 10px">
+ 
+    
+      <center><h5>Check your address through <a href="https://one.walmart.com/content/uswire/en_us/me/link-page/address-update-non-workday.html?cid=ME_Non_Workday_Address-Update_Popup" target="_blank"  onclick="converted()">One.Walmart.com/Enroll</a></h5></center>
+ 
+ 
+  </div>
+ 
+  </div>
+ 
+</div>
+	
+<!-- NON WORKDAY END -->	
+	
+   <script>
+
+  var fName = ContextHub.getItem("adp").displayName;
+  fName = fName.split(" ");
+     if (fName != '')
+  {
+  document.getElementById("hero-title").innerHTML = "Welcome " +fName[0];
+  }
+     
+var fNamenwd = ContextHub.getItem("adp").displayName;
+  fNamenwd = fNamenwd.split(" ");
+     if (fNamenwd != '')
+  {
+  document.getElementById("hero-title_nwd").innerHTML = "Welcome " +fNamenwd[0];
+  }
+        </script>
+                              <a href="javascript:void(0)" class="myButton2" onclick="dismissadd()" style="text-decoration: none;">Snooze</a>
+</div>
+
+
+<script>
+function dismissadd() {
+ 	setTimeout(function() {
+ 	var x = document.getElementById("addupdate");
+	x.className = x.className.replace("show", "");
+	var y = document.getElementById("blur");
+	y.className = y.className.replace("show", "");
+},1000);	
+}
+function myAddupdate() { //FUNCTION TO SHOW THE BIG CHAT BOX
+if (typeof Storage != "undefined") {
+	if (localStorage.getItem("ME_address_update")==ContextHub.getItem("adp").sAMAccountName) {
+		console.log("Converted audience");}
+	else {
+		if (sessionStorage.getItem("ME_address_update")==ContextHub.getItem("adp").sAMAccountName) {
+			console.log("Same session returning audience");}
+			else {
+				
+				if (ContextHub.getItem("adp").isWorkdayActive==false) {
+				
+				var x = document.getElementById("addupdate");
+  				x.className = "show";
+					var z = document.getElementById("walmartembed_nonworkday");
+  				z.className = "show";
+				var y = document.getElementById("blur");
+  				y.className = "show";
+ 				sessionStorage.setItem("ME_address_update", ContextHub.getItem("adp").sAMAccountName);
+				
+				}
+				
+				else{
+					var x = document.getElementById("addupdate");
+  				x.className = "show";
+					var z = document.getElementById("walmartembed_workday");
+  				z.className = "show";
+				var y = document.getElementById("blur");
+  				y.className = "show";
+ 				sessionStorage.setItem("ME_address_update", ContextHub.getItem("adp").sAMAccountName);
+					
+				}
+				
+				}
+		}
+	}
+}
+setTimeout(function() { //Delay 7 seconds before greeting function once DOM is loaded
+	myAddupdate ();
+}, 7000);
+function converted () {
+	localStorage.setItem("ME_address_update",ContextHub.getItem("adp").sAMAccountName);
+	setTimeout(function() {
+		dismissadd();
+		}, 1400);
+}
+</script>
