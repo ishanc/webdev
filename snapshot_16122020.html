@@ -1,0 +1,2036 @@
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="/content/dam/us-wire-wm1/images/me@/pop-up-css/bootstrapcss102020.css" rel="stylesheet" id="bootstrap-css">
+	</head>
+
+		<style>
+
+input[type=text] {
+    width: 30%;
+    padding: 0px 6px;
+    margin: -30px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #e1edf9;
+    position: absolute;
+}
+
+
+		.carousel-showmanymoveone .carousel-control {
+	   width: 4%;
+	   background-image: none;
+	}
+
+	.carousel-showmanymoveone .carousel-control.left {
+	   margin-left: -3% !important;
+		margin-top:2.5%;
+			font-size: 41px;
+		font-weight: 700;
+	}
+
+	.carousel-showmanymoveone .carousel-control.right {
+	   margin-right: -3% !important;
+		margin-top:2.5%;
+			font-size: 41px;
+		font-weight: 700;
+	}
+
+	.carousel-showmanymoveone .cloneditem-1,
+	.carousel-showmanymoveone .cloneditem-2,
+	.carousel-showmanymoveone .cloneditem-3 {
+	   display: none;
+	}
+
+	.carousel .item .col-xs-12 {
+	   padding: 0;
+	}
+
+
+	/* Medium Devices, Desktops */
+
+	@media only screen and (max-width: 992px) {
+	   .carousel .item .col-xs-12:nth-last-child(-n+2) {
+		  display: none;
+	   }
+	}
+
+	@media all and (min-width: 768px) {
+	   .carousel-showmanymoveone .carousel-inner > .active.left,
+	   .carousel-showmanymoveone .carousel-inner > .prev {
+		  left: -50%;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .active.right,
+	   .carousel-showmanymoveone .carousel-inner > .next {
+		  left: 50%;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .left,
+	   .carousel-showmanymoveone .carousel-inner > .prev.right,
+	   .carousel-showmanymoveone .carousel-inner > .active {
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+		  display: block;
+	   }
+	}
+
+	@media all and (min-width: 768px) and (transform-3d),
+	all and (min-width: 768px) and (-webkit-transform-3d) {
+	   .carousel-showmanymoveone .carousel-inner > .item.active.right,
+	   .carousel-showmanymoveone .carousel-inner > .item.next {
+		  -webkit-transform: translate3d(50%, 0, 0);
+		  transform: translate3d(50%, 0, 0);
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .item.active.left,
+	   .carousel-showmanymoveone .carousel-inner > .item.prev {
+		  -webkit-transform: translate3d(-50%, 0, 0);
+		  transform: translate3d(-50%, 0, 0);
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .item.left,
+	   .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+	   .carousel-showmanymoveone .carousel-inner > .item.active {
+		  -webkit-transform: translate3d(0, 0, 0);
+		  transform: translate3d(0, 0, 0);
+		  left: 0;
+	   }
+	}
+
+	@media all and (min-width: 992px) {
+	   .carousel-showmanymoveone .carousel-inner > .active.left,
+	   .carousel-showmanymoveone .carousel-inner > .prev {
+		  left: -16.6%;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .active.right,
+	   .carousel-showmanymoveone .carousel-inner > .next {
+		  left: 16.6%;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .left,
+	   .carousel-showmanymoveone .carousel-inner > .prev.right,
+	   .carousel-showmanymoveone .carousel-inner > .active {
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+	   .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+		  display: block;
+	   }
+	}
+
+	@media all and (min-width: 992px) and (transform-3d),
+	all and (min-width: 992px) and (-webkit-transform-3d) {
+	   .carousel-showmanymoveone .carousel-inner > .item.active.right,
+	   .carousel-showmanymoveone .carousel-inner > .item.next {
+		  -webkit-transform: translate3d(16.6%, 0, 0);
+		  transform: translate3d(16.6%, 0, 0);
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .item.active.left,
+	   .carousel-showmanymoveone .carousel-inner > .item.prev {
+		  -webkit-transform: translate3d(-16.6%, 0, 0);
+		  transform: translate3d(-16.6%, 0, 0);
+		  left: 0;
+	   }
+	   .carousel-showmanymoveone .carousel-inner > .item.left,
+	   .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+	   .carousel-showmanymoveone .carousel-inner > .item.active {
+		  -webkit-transform: translate3d(0, 0, 0);
+		  transform: translate3d(0, 0, 0);
+		  left: 0;
+	   }
+	}
+
+
+
+		.container_box{
+			width:92%;
+			height:128px;
+			top:107px;
+			border-radius:12px;
+			background-color: #041F41;
+			margin:10px;
+			margin-top: 8px;
+			color: white;
+		font-weight: bold;
+		padding-top: 46px;
+	text-align: center;
+		}	
+
+
+
+		.see_more {
+			color:white;
+			text-align: right;
+			padding-top:27px;
+			padding-right:14px;
+		}
+
+	.see_more a {
+			color:white;
+
+		}
+		.container_box_details {
+			color:white;
+			font-weight: bold;
+			padding-top:13px;
+			padding-left:14px;
+			text-align: left;
+			width:92%;
+			height:128px;
+			top:107px;
+			border-radius:12px;
+			background-color: #041F41;
+			margin:10px;
+			margin-top: 8px;
+			display: none;
+
+		}
+
+		#mySidenav.show{
+		height:250px;
+		width: 100%;
+		position: fixed;
+		z-index: 3;
+		left:0%;
+		background-color: white;
+		overflow-x: hidden;
+		transition: 0.8s;
+		border-radius:10px;
+		overflow: hidden;
+		}
+		#mySidenav.hidde{
+		height:0%;
+		width: 100%;
+		position: fixed;
+		z-index: 3;
+		left:0%;
+		background-color: white;
+		overflow-x: hidden;
+		transition: 0.8s;
+		border-radius:10px;
+		}
+		#snapshots_button.show{
+			margin-top:251px;
+			transition:0.8s;
+			color:white; 
+			background-color: #0071ce; 
+			border-radius:5px; 
+			left:45%; 
+			width: 110px; 
+			cursor:pointer; 
+			position:fixed; 
+			z-index:1; 
+			text-align:center;
+		}
+		#snapshots_button.hidde{
+			margin-top:0%;
+			transition:0.8s;
+			color:white; 
+			background-color: #0071ce; 
+			border-radius:5px; 
+			left:45%; 
+			width: 110px; 
+			cursor:pointer; 
+			position:fixed; 
+			z-index:1; 
+			text-align:center;
+		}
+
+		.see_more_details{
+			color:white;
+			text-align: right;
+				bottom: 18px;
+		right: 20px;
+		position: absolute;
+			padding-right:7px;
+		}
+		.see_more_details a{
+			color:white;
+
+		}
+		.api_res{
+		font-size: xx-large;
+		margin-left: 44px;
+		}
+
+		.container {
+		width: 94% !important;
+			margin-top: 2%;
+	}
+
+	/* Toogle switch--------------------*/
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 42px;
+	  height: 23px;
+	}
+
+	.switch input { 
+	  opacity: 0;
+	  width: 0;
+	  height: 0;
+	}
+
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 18px;
+	  width: 18px;
+	  left: 4px;
+	  bottom: 3px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider {
+	  background-color: #EB148D;
+	}
+
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #EB148D;
+	}
+
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(15px);
+	  -ms-transform: translateX(15px);
+	  transform: translateX(15px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 34px;
+	}
+
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+
+	.button_slider{
+		margin-left:70%;
+		margin-top: -15px;
+		}
+	.button_slider_edit{
+		margin-left: 5%;
+		margin-top: 8px;
+		}
+
+	/* Toogle switch end--------------------*/	
+
+	.sidenav {
+
+	  height: 0%;
+
+	  width: 100%;
+
+	  position: fixed;
+
+	  z-index: 2147483647;
+
+	left:0%;
+
+	  background-color: white;
+
+	  overflow-x: hidden;
+
+	  transition: 0.8s;
+	border-radius:10px;
+
+	}
+
+
+	.sidenav .closebtn {
+
+	  position: absolute;
+
+	  top: 0;
+
+	  right: 25px;
+
+	  font-size: 20px;
+
+	  margin-left: 50px;
+
+	}
+
+
+
+
+
+	@media only screen and (max-width: 600px) {
+		#mySidenav.show {
+			height: 203px;
+		}
+		.see_more_details{
+			right:61px;
+		}
+		#snapshots_button.show{
+			margin-top:204px;
+			left:36%!important;
+
+		}
+		#snapshots_button.hidde{
+			left:36%!important;
+
+		}
+	  .sidenav {width:100%;}
+
+
+	.my_snapshots {
+	left:36% !important;
+
+	}
+
+		.container {
+		width: 100% !important;
+
+	}
+
+		.container_box {
+		 width: 67%;
+			margin-left: 15%;
+			margin-top: 10px;
+		}
+		.container_box_details {
+		 width: 67%;
+			margin-left: 15%;
+			margin-top: 10px;
+		}
+
+		.carousel-showmanymoveone .carousel-control.left {
+	   margin-left: 0% !important;
+		margin-top:11.5%;
+
+	}
+
+	.carousel-showmanymoveone .carousel-control.right {
+	   margin-right: 6% !important;
+		margin-top:11.5%;
+
+	}
+		.button_slider {
+		margin-left: 20%;
+		margin-top: 8px;
+	}
+		.cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5, .cloneditem-6 {
+			display: none !important;
+		}
+	
+	#my_livebetteru_2, #my_livebetteru_3, #my_livebetteru_4, #my_livebetteru_5, #my_livebetteru_6, #my_livebetteru_7{
+		display: none;
+		}
+	#my_paystub_2, #my_paystub_3, #my_paystub_4, #my_paystub_5, #my_paystub_6, #my_paystub_7{
+		display:none;	
+		}
+	#my_401k_2, #my_401k_3, #my_401k_4, #my_401k_5, #my_401k_6, #my_401k_7{
+		display: none;
+		}
+	#my_schedule_2, #my_schedule_3, #my_schedule_4, #my_schedule_5, #my_schedule_6, #my_schedule_7{
+		display: none;
+		}
+	#my_pto_2; #my_pto_3, #my_pto_4, #my_pto_5, #my_pto_6, #my_pto_7{
+		display: none;
+		}
+	#my_team_2; #my_team_3, #my_team_4, #my_team_5, #my_team_6, #my_team_7{
+		display: none;
+		}
+	#my_totalrewards_2, #my_totalrewards_3, #my_totalrewards_4, #my_totalrewards_5, #my_totalrewards_6, #my_totalrewards_7{
+		display: none;
+		}
+			}
+	/*EDIT SECTION...............................*/
+		.edit_button{
+		background-color: #0071ce;
+		border-radius: 28px;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-size: 12px;
+		padding: 2px 16px;
+		text-decoration: none;
+	}
+		#editbody {
+
+		text-align: center;
+		border-radius:15px; 
+		padding: 0px;
+		position: fixed;
+		z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+		width: 600px;
+		top: 60%;
+		left: 50%;
+		margin-top: -300px; /* Negative half of height. */
+		margin-left: -300px; /* Negative half of width. */
+		display:none;
+		box-shadow: 2px 2px 7px 2px #888888;
+		background-color:white;
+	}
+		#paystub_unlock_body {
+
+		text-align: center;
+		border-radius:15px; 
+		padding: 42px;
+		position: fixed;
+		z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+		width: 600px;
+		top: 60%;
+		left: 50%;
+		margin-top: -300px; /* Negative half of height. */
+		margin-left: -300px; /* Negative half of width. */
+		display:none;
+		box-shadow: 2px 2px 7px 2px #888888;
+		background-color:white;
+	}
+		#blur {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	content: ' ';
+    	visibility: hidden;
+  		background: rgba(255, 255, 255, 0.2); 
+  		backdrop-filter: blur(8px); 
+  		height: 100vh;
+		width: 100%;
+		z-index: 4;
+  	}
+			
+	#blur_paystub {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	content: ' ';
+    	visibility: hidden;
+  		background: rgba(255, 255, 255, 0.2); 
+  		backdrop-filter: blur(8px); 
+  		height: 100vh;
+		width: 100%;
+		z-index: 4;
+  	}
+		@media screen and (max-width: 600px) {
+
+
+		#editbody {
+
+			text-align: center;
+			padding: 0px;
+			position: fixed;
+			z-index: 2147483638; /*MUST BE SET HIGH TO ENSURE PROPER OVERLAP ON OTHER COMPONENTS*/
+			width:340px;
+			top: 30%;
+			left: 50%;
+			margin-top: -170px; /* Negative half of height. */
+			margin-left: -170px; /* Negative half of width. */
+			font-size: 100% !important;
+			border-radius: 15px;
+		}
+		}
+
+			}
+	</style>
+
+<div>	 
+<div id="snapshots_button" class="my_snapshots" style="color:white; background-color: #0071ce; border-radius:5px; left:45%; width: 110px; cursor:pointer; position:fixed; z-index:1; text-align:center;" onclick="openNav()"><center>My Snapshots &#8595;</center></div>
+<div id="blur" onclick="closeEdit()"></div>
+	
+	<!-- EDIT POP-UP SCREEN BODY START-->
+	
+	<div id="editbody"> 
+	<h4 style="text-align:left; padding:20px;"><b>Your Snapshots Library</b></h4><br>
+
+	<div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="paystub_toggle" type="checkbox" checked onclick="togglePaystub()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My Paystub - View your latest net payment</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="401k_toggle" type="checkbox" checked onclick="toggle401k()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My 401K - View your contribution</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="schedule_toggle" type="checkbox" checked onclick="toggleSchedule()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My Schedule - View your next shift</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="pto_toggle" type="checkbox" checked onclick="togglePto()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My PTO - View your accrued/remaining days</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="team_toggle" type="checkbox" checked onclick="toggleTeam()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My Team - View your open roles on Workday</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="rewards_toggle" type="checkbox" checked onclick="toggleRewards()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My Total Rewards - View your Total rewards value</span>
+
+		</div> 
+	 <div align="left" class="button_slider_edit">
+
+		<label class="switch">
+	  <input id="lbu_toggle" type="checkbox" checked onclick="toggleLbu()">
+	  <span class="slider round"></span>
+	</label>&nbsp;&nbsp;<span style="font-size: 14px; font-weight: bold;">My Live Better U - View your upcoming LBU courses</span>
+
+		</div> 
+	<div class="edit_button" style="margin-top:20px; margin-bottom:20px; font-size:16px;" onClick="closeEdit()"><b>Close</b></div>	
+
+	</div>
+	<!-- EDIT POP-UP SCREEN BODY END-->
+<!--blur-->
+	<div id="blur_paystub" onclick="close_paystub_auth()"></div>
+	<!--Paystub unlock body start-->
+	<div id="paystub_unlock_body">
+		<h5 style="text-align:center;"><b>To view your current paystub data, please provide additional security information as follows.</b></h5>
+	<form id="form" onsubmit="return false;">
+		<p>
+		<h6 style="text-align: left; margin-top: 56px;">Enter your WIN number</h6>
+	<!--<label for="win_number">Enter your WIN number</label><br>	-->
+    <input type="text" id="winnumber" /><br><br>
+	<!--<label for="user_id">Enter your user ID</label><br> -->
+		<h6 style="text-align: left;">Enter your user ID</h6>
+    <input type="text" id="user_id" /><br>	<br>
+		
+    <input type="submit" onclick="paystub_unlock_submit();" />
+		</p>
+</form>
+	
+	</div>
+	
+	
+	<!--Paystub unlock body end-->
+	<div id="mySidenav" class="sidenav">
+
+	<div class="container">
+	 <div class="button_slider">
+		<span style="font-size: 14px; font-weight: bold;">View Snapshot Ticker</span>&nbsp;&nbsp;
+		<label class="switch">
+	  <input type="checkbox" onclick="toggleNav()">
+	  <span class="slider round"></span>
+	</label>
+		&nbsp;&nbsp;<div class="edit_button" onClick="openEdit()">Edit</div>
+		</div> 
+
+	<!--  <a href="https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel">this code sample</a>   -->
+	<div class="row">
+	   <div class="col-md-12">
+		  <div class="carousel carousel-showmanymoveone slide" id="carousel-tilenav" data-interval="false">
+			 <div class="carousel-inner">
+				
+				 <!-- Item 1 begining-->
+				 
+				 <div class="item active">
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_1">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span id="unlock" style="display:none;" class="api_res paystub"></span>
+						   <span onclick="paystub_unlock()" id="lock" style="cursor: pointer;"><img src="/content/dam/us-wire-wm1/images/me@/snapshot/pad_lock.png" style="width:16%;height:auto;margin-left:36%">
+						   <br>Click to view recent pay period data</span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					<div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_1">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					<div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_1">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_1">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+					<div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_1">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_1">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_1">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+				</div>
+				 
+				 
+		<!--Item 2 begining-->		 
+				 
+				 
+			   <div class="item">
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_2">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_2">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_2">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+					<div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_2">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_2">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_2">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_2">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				</div>
+				 
+				 <!--Item 3 begining-->
+				 
+				 <div class="item">
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_3">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_3">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+					<div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_3">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_3">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_3">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_3">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_3">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 
+				</div>
+				 
+				 <!--item 4 begining-->
+			<div class="item">
+				   
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_4">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+					<div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_4">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_4">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_4">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_4">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_4">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_4">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 
+				</div>	
+				<!--Item 5 begining-->
+				 <div class="item">
+				   
+					 
+					<div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_5">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_5">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_5">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_5">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_5">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_5">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_5">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>	
+					 
+				</div>
+				 
+				 <!--Item 6 begining-->
+				 <div class="item">
+				   
+					 
+					
+				<div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_6">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_6">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_6">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_6">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_6">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_6">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_6">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+					 
+				</div>
+				 <!--item 7 begining-->
+				 
+				 <div class="item">
+				   
+				<div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru" id="my_livebetteru_7">
+						<div class="container_box">
+					  <p>My Live Better U</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Live Better U</p>
+							<span class="api_res livebetteru"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+				   <div class="col-xs-12 col-sm-6 col-md-2 my_paystub" id="my_paystub_7">
+					  <div class="container_box">
+					   <p>My Paystub</p>
+					  <div class="see_more"> <a href="#">See More</a></div>
+						  </div>
+					   <div class="container_box_details">
+					   <p>My Paystub</p>
+						   <span class="api_res paystub"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_401k" id="my_401k_7">
+					   <div class="container_box"> 
+					  <p>My 401K</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My 401K</p>
+						   <span class="api_res 401k"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+				<div class="col-xs-12 col-sm-6 col-md-2 my_schedule" id="my_schedule_7">
+					   <div class="container_box"> 
+					  <p>My Schedule</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Schedule</p>
+							<span class="api_res schedule"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_pto" id="my_pto_7">
+						<div class="container_box">
+					  <p>My PTO</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My PTO</p>
+							<span class="api_res pto"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_team" id="my_team_7">
+						<div class="container_box">
+					  <p>My Team</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Team</p>
+							<span class="api_res team"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+					 <div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards" id="my_totalrewards_7">
+						<div class="container_box">
+					  <p>My Total Rewards</p>
+					   <div class="see_more"> <a href="#">See More</a></div>
+					   </div>
+					   <div class="container_box_details">
+					   <p>My Total Rewards</p>
+							<span class="api_res rewards"></span>
+						   <div class="see_more_details"> <a href="#">See More</a></div>
+						  </div>
+				   </div>
+					 
+				</div>
+				<!--item 7 end---add additional items under this--> 
+				 
+			 </div>
+			 <a class="left carousel-control" href="#carousel-tilenav" data-slide="prev" style="color:#0071ce !important;"><</a>
+			 <a class="right carousel-control" href="#carousel-tilenav" data-slide="next" style="color:#0071ce !important;">></i></a>
+		  </div>
+	   </div>
+	</div>
+
+
+	</div>	
+	</div>
+</div>
+	<script>
+function close_paystub_auth(){
+	
+	document.getElementById("blur_paystub").style.visibility="hidden";
+	
+	document.getElementById("paystub_unlock_body").style.display="none"; 
+	
+	
+}
+//paystub authentication form data evaluation
+function paystub_unlock_submit() {
+    var input = document.getElementById("winnumber").value;
+	var user_uID = document.getElementById("user_id").value;
+    
+	var win_num=ContextHub.getItem("adp")["wm-IdentificationNumber"];
+	var uID=ContextHub.getItem("adp").sAMAccountName;
+if (input==win_num && user_uID==uID){
+console.log("matched")
+	
+	document.getElementById("unlock").style.display="block";
+	document.getElementById("lock").style.display="none";
+	document.getElementById("paystub_unlock_body").style.display="none";
+	document.getElementById("blur_paystub").style.visibility="hidden";
+}
+	else {
+		alert("WIN and user ID did not match");
+	document.getElementById("blur_paystub").style.visibility="hidden";
+	document.getElementById("paystub_unlock_body").style.display="none"; 
+		  
+		 }
+
+}
+
+//paystub authentication box start-----------------
+		function paystub_unlock(){
+		document.getElementById("paystub_unlock_body").style.display="block";
+			document.getElementById("blur_paystub").style.visibility="visible";
+		}
+		
+//Edit box Start-----------------------------------
+	function openEdit(){
+		document.getElementById("blur").style.visibility="visible";
+		var j = document.getElementById("editbody");
+					j.style.display="block";
+	
+	}
+
+		function closeEdit(){
+			document.getElementById("blur").style.visibility="hidden";
+		var k = document.getElementById("editbody");
+					k.style.display="none";
+	remove7thbox();
+			
+		}
+//Edit box End-----------------------------------
+//remove 7th box start------------------------------
+function remove7thbox() {
+if ((localStorage.getItem("my_paystub")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)&&(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName) ) {
+
+	document.getElementById("my_livebetteru_1").style.display="none";
+	document.getElementById("my_paystub_2").style.display="none";
+	document.getElementById("my_401k_3").style.display="none";
+	document.getElementById("my_schedule_4").style.display="none";
+	document.getElementById("my_pto_5").style.display="none";
+	document.getElementById("my_team_6").style.display="none";
+	document.getElementById("my_totalrewards_7").style.display="none";	
+
+}
+	else {
+	
+	var count=0;
+		
+	if (localStorage.getItem("my_paystub")==ContextHub.getItem("adp").sAMAccountName)	{
+		document.getElementById("my_paystub_2").style.display="block";
+		var count=count+1;
+	}
+	if (localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName)	{
+		document.getElementById("my_401k_3").style.display="block";
+		var count=count+1;
+	}
+	
+	if (localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName){
+		document.getElementById("my_schedule_4").style.display="block";
+		var count=count+1;
+	}
+	
+	if(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName){
+		document.getElementById("my_pto_5").style.display="block";
+		var count=count+1;
+	}
+	
+	if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName) {
+		document.getElementById("my_team_6").style.display="block";
+		var count=count+1;
+	}
+	
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName){
+		document.getElementById("my_totalrewards_7").style.display="block";
+		var count=count+1;
+	}
+		
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName) {
+		document.getElementById("my_livebetteru_1").style.display="block";
+		var count=count+1;
+	}
+	
+	
+	}
+	
+	if (count<=6) {		//Hide carousel controls if snapshots are <6
+		var x = document.getElementsByClassName("carousel-control"); 
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+	}
+		
+	}
+	else {
+			var x = document.getElementsByClassName("carousel-control"); 
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block";
+		}
+		}
+//if screen width is smaller than 800px then display carousel control
+var width=window.screen.width * window.devicePixelRatio;
+if (width<=800) {
+	var x = document.getElementsByClassName("carousel-control"); 
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block";
+		}
+//Hide duplicate corresponding cards in mobile view only----------------------------------------------
+
+	if(localStorage.getItem("my_paystub")!=ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_401k_2").style.display="none";
+	document.getElementById("my_schedule_3").style.display="none";
+	document.getElementById("my_pto_4").style.display="none";
+	document.getElementById("my_team_5").style.display="none";
+	document.getElementById("my_totalrewards_6").style.display="none";
+	document.getElementById("my_livebetteru_7").style.display="none";
+	document.getElementById("my_401k_7").style.display="none";
+}
+if(localStorage.getItem("my_paystub")==ContextHub.getItem("adp").sAMAccountName)	{
+	
+	if(localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_401k_2").style.display="block";
+	}
+	if(localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_schedule_3").style.display="block";
+	}
+	if(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_pto_4").style.display="block";
+	}
+	if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_team_5").style.display="block";
+	}
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_totalrewards_6").style.display="block";
+	}
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+	if(localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_401k_7").style.display="block";
+	}
+}
+
+if(localStorage.getItem("my_401k")!=ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_schedule_3").style.display="none";
+	document.getElementById("my_pto_4").style.display="none";
+	document.getElementById("my_team_5").style.display="none";
+	document.getElementById("my_totalrewards_6").style.display="none";
+	document.getElementById("my_livebetteru_7").style.display="none";
+}
+
+if(localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_schedule_3").style.display="block";
+	}
+	if(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_pto_4").style.display="block";
+	}
+	if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_team_5").style.display="block";
+	}
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_totalrewards_6").style.display="block";
+	}
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+}
+	
+if(localStorage.getItem("my_schedule")!=ContextHub.getItem("adp").sAMAccountName)	{
+
+	document.getElementById("my_pto_4").style.display="none";
+	document.getElementById("my_team_5").style.display="none";
+	document.getElementById("my_totalrewards_6").style.display="none";
+	document.getElementById("my_livebetteru_7").style.display="none";
+}
+
+if(localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_pto_4").style.display="block";
+	}
+	if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_team_5").style.display="block";
+	}
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_totalrewards_6").style.display="block";
+	}
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+}
+	
+if(localStorage.getItem("my_pto")!=ContextHub.getItem("adp").sAMAccountName)	{
+
+	document.getElementById("my_team_5").style.display="none";
+	document.getElementById("my_totalrewards_6").style.display="none";
+	document.getElementById("my_livebetteru_7").style.display="none";
+}
+
+if(localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_team_5").style.display="block";
+	}
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_totalrewards_6").style.display="block";
+	}
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+}
+	
+if(localStorage.getItem("my_team")!=ContextHub.getItem("adp").sAMAccountName)	{
+
+	document.getElementById("my_totalrewards_6").style.display="none";
+	document.getElementById("my_livebetteru_7").style.display="none";
+}
+if(localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_totalrewards_6").style.display="block";
+	}
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+}
+	
+if(localStorage.getItem("my_totalrewards")!=ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="none";
+}
+if(localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_livebetteru_7").style.display="block";
+	}
+}
+	
+if(localStorage.getItem("my_livebetteru")!=ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_paystub_7").style.display="none";
+}
+if(localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName)	{
+	if(localStorage.getItem("my_paystub")==ContextHub.getItem("adp").sAMAccountName)	{
+	document.getElementById("my_paystub_7").style.display="block";
+	}
+}
+
+}
+	
+
+	
+		}
+		
+//remove 7th box end------------------------------
+//Open & Close Snapshots-----------------------------------	
+	function openNav() { 
+
+	if(localStorage.getItem("First_Launch")==ContextHub.getItem("adp").sAMAccountName) {		//Check first launch and look for saved settings
+
+		if (localStorage.getItem("my_paystub")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_paystub();
+			document.getElementById("paystub_toggle").checked = true;
+		}
+		else {
+			hide_my_paystub();
+			document.getElementById("paystub_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_401k")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_401k();	
+			document.getElementById("401k_toggle").checked = true;
+		}
+		else {
+			hide_my_401k();
+			document.getElementById("401k_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_schedule")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_schedule();	
+			document.getElementById("schedule_toggle").checked = true;
+		}
+		else {
+			hide_my_schedule();
+			document.getElementById("schedule_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_pto")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_pto();
+			document.getElementById("pto_toggle").checked = true;
+		}
+		else {
+			hide_my_pto();
+			document.getElementById("pto_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_team")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_team();
+			document.getElementById("team_toggle").checked = true;
+		}
+		else {
+			hide_my_team();
+			document.getElementById("team_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_totalrewards")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_totalrewards();
+			document.getElementById("rewards_toggle").checked = true;
+		}
+		else {
+			hide_my_totalrewards();
+			document.getElementById("rewards_toggle").checked = false;
+		}
+
+		if (localStorage.getItem("my_livebetteru")==ContextHub.getItem("adp").sAMAccountName) {
+			show_my_livebetteru();
+			document.getElementById("lbu_toggle").checked = true;
+		}
+		else {
+			hide_my_livebetteru();
+			document.getElementById("lbu_toggle").checked = false;
+		}
+	}
+		else {
+			localStorage.setItem("First_Launch", ContextHub.getItem("adp").sAMAccountName); // If first launch is missing, enable all options and add first launch value
+			show_my_paystub();
+			show_my_401k();
+			show_my_schedule();
+			show_my_pto();
+			show_my_team();
+			show_my_totalrewards();
+			show_my_livebetteru();
+		}
+
+		var b = document.getElementById("mySidenav");
+		b.className ="show";
+		
+		var c = document.getElementById("snapshots_button");
+		c.className ="show";
+		document.getElementById("snapshots_button").setAttribute( "onClick", "closeNav()" );
+		document.getElementById("snapshots_button").innerHTML="My Snapshots &#8593";
+	
+		remove7thbox();
+	}
+
+	function closeNav() {
+
+	var b = document.getElementById("mySidenav");
+		b.className ="hidde";
+		var c = document.getElementById("snapshots_button");
+		c.className ="hidde";
+	document.getElementById("snapshots_button").setAttribute( "onClick", "openNav()" );
+		document.getElementById("snapshots_button").innerHTML="My Snapshots &#8595";
+	}
+
+	//show or hide snapshot components-----
+
+		function hide_my_paystub() {
+		var x = document.getElementsByClassName("my_paystub"); 
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+		localStorage.removeItem("my_paystub");
+		}
+		function show_my_paystub() {
+		var x = document.getElementsByClassName("my_paystub"); 
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_paystub", ContextHub.getItem("adp").sAMAccountName);	
+
+		}
+
+		function hide_my_401k() {
+		var x = document.getElementsByClassName("my_401k");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_401k");
+		}
+		function show_my_401k() {
+		var x = document.getElementsByClassName("my_401k");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 	
+		}
+			localStorage.setItem("my_401k", ContextHub.getItem("adp").sAMAccountName);
+		}
+
+		function hide_my_schedule() {
+		var x = document.getElementsByClassName("my_schedule");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_schedule");
+
+		}
+		function show_my_schedule() {
+		var x = document.getElementsByClassName("my_schedule");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_schedule", ContextHub.getItem("adp").sAMAccountName);
+		}
+
+		function hide_my_pto() {
+		var x = document.getElementsByClassName("my_pto");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_pto");
+
+		}
+		function show_my_pto() {
+		var x = document.getElementsByClassName("my_pto");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_pto", ContextHub.getItem("adp").sAMAccountName);
+		}
+
+		function hide_my_team() {
+		var x = document.getElementsByClassName("my_team");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_team");
+
+		}
+		function show_my_team() {
+		var x = document.getElementsByClassName("my_team");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_team", ContextHub.getItem("adp").sAMAccountName);
+		}
+
+		function hide_my_totalrewards() {
+		var x = document.getElementsByClassName("my_totalrewards");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_totalrewards");
+		}
+		function show_my_totalrewards() {
+		var x = document.getElementsByClassName("my_totalrewards");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_totalrewards", ContextHub.getItem("adp").sAMAccountName);
+		}
+
+		function hide_my_livebetteru() {
+		var x = document.getElementsByClassName("my_livebetteru");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="none"; 
+		}
+			localStorage.removeItem("my_livebetteru");
+
+		}
+		function show_my_livebetteru() {
+		var x = document.getElementsByClassName("my_livebetteru");
+		for(var i = 0; i < x.length; i++){
+			x[i].style.display="block"; 
+		}
+			localStorage.setItem("my_livebetteru", ContextHub.getItem("adp").sAMAccountName);
+		}
+	//Carousel scripts
+/*
+	(function(){
+	  $('.carousel-showmanymoveone .item').each(function(){
+		var itemToClone = $(this);
+
+		for (var i=1;i<7;i++) {
+		  itemToClone = itemToClone.next();
+
+		  // wrap around if at end of item collection
+		  if (!itemToClone.length) {
+			itemToClone = $(this).siblings(':first');
+		  }
+
+		  // grab item, clone, add marker class, add to collection
+		  itemToClone.children(':first-child').clone()
+			.addClass("cloneditem-"+(i))
+			.appendTo($(this));
+		}
+	  });
+	}());
+*/
+
+
+		function show_details() {
+		  var divsToHide = document.getElementsByClassName("container_box_details"); //divsToHide is an array
+		for(var i = 0; i < divsToHide.length; i++){
+
+			divsToHide[i].style.display = "block"; // depending on what you're doing
+		}
+			  var divsToHide2 = document.getElementsByClassName("container_box"); //divsToHide is an array
+		for(var i = 0; i < divsToHide2.length; i++){
+
+			divsToHide2[i].style.display = "none"; // depending on what you're doing
+		} 
+
+		//Insert api data.....................
+
+		var wage = document.getElementsByClassName("paystub"); 
+		for(var i = 0; i < wage.length; i++){
+			wage[i].innerHTML=wage_response_all; 
+		}
+
+		var contrib = document.getElementsByClassName("401k"); 
+		for(var i = 0; i < contrib.length; i++){
+			contrib[i].innerHTML=sessionStorage.getItem("k_value"); 
+		}
+
+		//Insert api data End.....................	
+
+		}
+
+		function hide_details() {
+		  var divsToHide = document.getElementsByClassName("container_box_details"); //divsToHide is an array
+		for(var i = 0; i < divsToHide.length; i++){
+
+			divsToHide[i].style.display = "none"; // depending on what you're doing
+		}
+				 var divsToHide2 = document.getElementsByClassName("container_box"); //divsToHide is an array
+		for(var i = 0; i < divsToHide2.length; i++){
+
+			divsToHide2[i].style.display = "block"; // depending on what you're doing
+		}
+		  document.getElementById("wage").innerHTML="";
+						}
+//Toggle button functions-------------------------------------------------------------------------
+		function toggleNav() {
+			var divsToHide3 = document.getElementsByClassName("container_box_details");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_details();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_details();
+			}
+
+
+			else{
+				 hide_details();
+			}
+		}
+		
+		//Edit pop-up toggle button functions----
+		
+		// Paystub Toggle
+		function togglePaystub() {
+			var divsToHide3 = document.getElementsByClassName("my_paystub");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_paystub();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_paystub();
+			}
+
+
+			else{
+				 hide_my_paystub();
+			}
+		}
+		
+		// 401k Toggle
+		function toggle401k() {
+			var divsToHide3 = document.getElementsByClassName("my_401k");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_401k();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_401k();
+			}
+
+
+			else{
+				 hide_my_401k();
+			}
+		}
+		
+		//Schedule Toggle
+		function toggleSchedule() {
+			var divsToHide3 = document.getElementsByClassName("my_schedule");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_schedule();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_schedule();
+			}
+
+
+			else{
+				 hide_my_schedule();
+			}
+		}
+		
+		// PTO Toggle
+		function togglePto() {
+			var divsToHide3 = document.getElementsByClassName("my_pto");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_pto();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_pto();
+			}
+
+
+			else{
+				 hide_my_pto();
+			}
+		}
+		
+		// Team Toggle
+		function toggleTeam() {
+			var divsToHide3 = document.getElementsByClassName("my_team");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_team();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_team();
+			}
+
+
+			else{
+				 hide_my_team();
+			}
+		}
+		
+		// Rewards Toggle
+		function toggleRewards() {
+			var divsToHide3 = document.getElementsByClassName("my_totalrewards");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_totalrewards();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_totalrewards();
+			}
+
+
+			else{
+				 hide_my_totalrewards();
+			}
+		}
+		
+		// LBU Toggle
+		function toggleLbu() {
+			var divsToHide3 = document.getElementsByClassName("my_livebetteru");
+		 if ( divsToHide3[i].style.display === "none"){
+			  show_my_livebetteru();
+		 }
+
+			else if ( divsToHide3[i].style.display === ""){
+				show_my_livebetteru();
+			}
+
+
+			else{
+				 hide_my_livebetteru();
+			}
+		}
+	//Benefits API-----------------------------------------------------------------------------------------------------------------------
+
+	//Get Auth Token
+	 setTimeout(function() {	
+	var benapitoken;
+	var jsonStr = JSON.parse(atob(document.cookie.match('adp_user_profile=([^\\s,;]*)')[1]));
+	var win = "213299824" //jsonStr["wm-IdentificationNumber"];
+	var url = "https://benefits-coverage-dev.walmart.com/api/wmtbenefits/coverages/"+win+"?isBoss=False";
+
+
+
+	var settings = {
+	  "url": "https://benefits-auth-dev.walmart.com/api/wmtbenefits/benAuthToken",
+	  "method": "GET",
+	  "timeout": 0,
+	  "headers": {
+		"Content-Type": "application/json",
+	"winNbr": win
+	  },
+	};
+
+	$.ajax(settings).done(function (response) {
+	  response_all = response;
+	benapitoken = response.message;
+	   console.log(response);
+
+
+	});
+
+		// Pay wage
+	 setTimeout(function() {				// Added session timeout 2sec delay	
+	var settings = {
+	  "url": "https://benefits-optionrate-dev.walmart.com/api/wmtbenefits/currentWage/213299824/2",
+	  "method": "GET",
+	  "timeout": 0,
+	  "headers": {
+		"Content-Type": "application/json",
+		"ben-api-token": benapitoken,
+		"winNbr": win,
+		"payFrequencyCode": 2
+	  },
+	};
+
+		 $.ajax(settings).done(function (wage_response) {
+	  wage_response_all = wage_response;
+	   console.log(wage_response);
+	});
+
+
+		}, 2000);
+
+	//Coverage Service - 401K %
+	setTimeout(function() {				// Added session timeout 2sec delay		
+	var settings = {
+	  "url": url,
+	  "method": "GET",
+	  "timeout": 0,
+	  "headers": {
+		"Content-Type": "application/json",
+		"ben-api-token": benapitoken
+	  },
+	};
+
+
+
+	$.ajax(settings).done(function (response401) {
+	  response401_all = response401;
+	   console.log(response401);
+	 var k_rate= (response401_all[new Date().getFullYear()][10].rateFor401K)/100;
+			var k_value= k_rate*wage_response_all;
+			console.log(k_value);
+	 sessionStorage.setItem("k_value", k_value);
+	});	
+		}, 2500);
+
+		}, 2000);
+	</script>

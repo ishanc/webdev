@@ -1,0 +1,870 @@
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="/content/dam/us-wire-wm1/images/me@/pop-up-css/bootstrapcss102020.css" rel="stylesheet" id="bootstrap-css">
+</head>
+
+<style>
+
+	
+	
+	.carousel-showmanymoveone .carousel-control {
+   width: 4%;
+   background-image: none;
+}
+
+.carousel-showmanymoveone .carousel-control.left {
+   margin-left: -3% !important;
+	margin-top:2.5%;
+	    font-size: 41px;
+    font-weight: 700;
+}
+
+.carousel-showmanymoveone .carousel-control.right {
+   margin-right: -3% !important;
+	margin-top:2.5%;
+	    font-size: 41px;
+    font-weight: 700;
+}
+
+.carousel-showmanymoveone .cloneditem-1,
+.carousel-showmanymoveone .cloneditem-2,
+.carousel-showmanymoveone .cloneditem-3 {
+   display: none;
+}
+
+.carousel .item .col-xs-12 {
+   padding: 0;
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+   .carousel .item .col-xs-12:nth-last-child(-n+2) {
+      display: none;
+   }
+}
+
+@media all and (min-width: 768px) {
+   .carousel-showmanymoveone .carousel-inner > .active.left,
+   .carousel-showmanymoveone .carousel-inner > .prev {
+      left: -50%;
+   }
+   .carousel-showmanymoveone .carousel-inner > .active.right,
+   .carousel-showmanymoveone .carousel-inner > .next {
+      left: 50%;
+   }
+   .carousel-showmanymoveone .carousel-inner > .left,
+   .carousel-showmanymoveone .carousel-inner > .prev.right,
+   .carousel-showmanymoveone .carousel-inner > .active {
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+      display: block;
+   }
+}
+
+@media all and (min-width: 768px) and (transform-3d),
+all and (min-width: 768px) and (-webkit-transform-3d) {
+   .carousel-showmanymoveone .carousel-inner > .item.active.right,
+   .carousel-showmanymoveone .carousel-inner > .item.next {
+      -webkit-transform: translate3d(50%, 0, 0);
+      transform: translate3d(50%, 0, 0);
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner > .item.active.left,
+   .carousel-showmanymoveone .carousel-inner > .item.prev {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner > .item.left,
+   .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+   .carousel-showmanymoveone .carousel-inner > .item.active {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      left: 0;
+   }
+}
+
+@media all and (min-width: 992px) {
+   .carousel-showmanymoveone .carousel-inner > .active.left,
+   .carousel-showmanymoveone .carousel-inner > .prev {
+      left: -16.6%;
+   }
+   .carousel-showmanymoveone .carousel-inner > .active.right,
+   .carousel-showmanymoveone .carousel-inner > .next {
+      left: 16.6%;
+   }
+   .carousel-showmanymoveone .carousel-inner > .left,
+   .carousel-showmanymoveone .carousel-inner > .prev.right,
+   .carousel-showmanymoveone .carousel-inner > .active {
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+   .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+      display: block;
+   }
+}
+
+@media all and (min-width: 992px) and (transform-3d),
+all and (min-width: 992px) and (-webkit-transform-3d) {
+   .carousel-showmanymoveone .carousel-inner > .item.active.right,
+   .carousel-showmanymoveone .carousel-inner > .item.next {
+      -webkit-transform: translate3d(16.6%, 0, 0);
+      transform: translate3d(16.6%, 0, 0);
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner > .item.active.left,
+   .carousel-showmanymoveone .carousel-inner > .item.prev {
+      -webkit-transform: translate3d(-16.6%, 0, 0);
+      transform: translate3d(-16.6%, 0, 0);
+      left: 0;
+   }
+   .carousel-showmanymoveone .carousel-inner > .item.left,
+   .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+   .carousel-showmanymoveone .carousel-inner > .item.active {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      left: 0;
+   }
+}
+	
+	
+	
+	.container_box{
+		width:232px;
+		height:128px;
+		top:107px;
+		border-radius:12px;
+		background-color: #041F41;
+		margin:10px;
+		color: white;
+    font-weight: bold;
+    padding-top: 46px;
+text-align: center;
+	}	
+	
+
+
+	.see_more {
+		color:white;
+		text-align: right;
+		padding-top:27px;
+		padding-right:14px;
+	}
+	
+.see_more a {
+		color:white;
+		
+	}
+	.container_box_details {
+		color:white;
+		font-weight: bold;
+		padding-top:13px;
+		padding-left:14px;
+		text-align: left;
+		width:232px;
+		height:128px;
+		top:107px;
+		border-radius:12px;
+		background-color: #041F41;
+		margin:10px;
+		display: none;
+	}
+	
+	#mySidenav.show{
+	height:30%;
+	width: 100%;
+  	position: fixed;
+ 	z-index: 2147483647;
+	left:0%;
+	background-color: white;
+	overflow-x: hidden;
+	transition: 0.8s;
+	border-radius:10px;
+	}
+	#mySidenav.hidde{
+	height:0%;
+	width: 100%;
+  	position: fixed;
+ 	z-index: 2147483647;
+	left:0%;
+	background-color: white;
+	overflow-x: hidden;
+	transition: 0.8s;
+	border-radius:10px;
+	}
+	#snapshots_button.show{
+		margin-top:14.5%;
+		transition:0.8s;
+		color:white; 
+		background-color: #0071ce; 
+		border-radius:5px; 
+		left:45%; 
+		width: 110px; 
+		cursor:pointer; 
+		position:fixed; 
+		z-index:99999; 
+		text-align:center;
+	}
+	#snapshots_button.hidde{
+		margin-top:0%;
+		transition:0.8s;
+		color:white; 
+		background-color: #0071ce; 
+		border-radius:5px; 
+		left:45%; 
+		width: 110px; 
+		cursor:pointer; 
+		position:fixed; 
+		z-index:99999; 
+		text-align:center;
+	}
+	
+	.see_more_details{
+		color:white;
+		text-align: right;
+		    bottom: 18px;
+    right: 20px;
+    position: absolute;
+		padding-right:14px;
+	}
+	.see_more_details a{
+		color:white;
+
+	}
+	.api_res{
+	font-size: xx-large;
+    margin-left: 44px;
+	}
+	
+	.container {
+    width: 1600px !important;
+		margin-top: 2%;
+}
+
+/* Toogle switch--------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 23px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #EB148D;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #EB148D;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	
+	.button_slider{
+		margin-left:80%;
+		margin-top: -15px;
+	}	
+	
+/* Toogle switch end--------------------*/	
+	
+.sidenav {
+
+  height: 0%;
+
+  width: 100%;
+
+  position: fixed;
+
+  z-index: 2147483647;
+
+left:0%;
+
+  background-color: white;
+
+  overflow-x: hidden;
+
+  transition: 0.8s;
+border-radius:10px;
+
+}
+
+
+.sidenav .closebtn {
+
+  position: absolute;
+
+  top: 0;
+
+  right: 25px;
+
+  font-size: 20px;
+
+  margin-left: 50px;
+
+}
+
+ 
+
+ 
+
+@media only screen and (max-width: 600px) {
+
+	.see_more_details{
+		right:61px;
+	}
+	#snapshots_button.show{
+		margin-top:65%;
+		left:36%!important;
+		
+	}
+	#snapshots_button.hidde{
+		left:36%!important;
+		
+	}
+  .sidenav {width:100%;}
+
+
+.my_snapshots {
+left:36% !important;
+	
+}
+	
+	.container {
+    width: 100% !important;
+		   
+}
+	
+	.container_box {
+	 margin-left: 15%;
+	}
+	.container_box_details {
+	 margin-left: 15%;
+	}
+	
+	.carousel-showmanymoveone .carousel-control.left {
+   margin-left: 0% !important;
+	margin-top:11.5%;
+
+}
+
+.carousel-showmanymoveone .carousel-control.right {
+   margin-right: 6% !important;
+	margin-top:11.5%;
+
+}
+	.button_slider {
+    margin-left: 20%;
+    margin-top: 8px;
+}
+	.cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5 {
+		display: none !important;
+	}
+}
+
+	#my_paystub{
+		display: block;
+	}
+	#my_paystub.hide{
+		display: none;
+	}
+	#my_401k{
+		display: block;
+	}
+	#my_401k.hide{
+		display: none;
+	}
+	#my_schedule{
+		display: block;
+	}
+	#my_schedule.hide{
+		display: none;
+	}
+	#my_pto{
+		display: block;
+	}
+	#my_pto.hide{
+		display: none;
+	}
+	#my_team{
+		display: block;
+	}
+	#my_team.hide{
+		display: none;
+	}
+	#my_totalrewards{
+		display: block;
+	}
+	#my_totalrewards.hide{
+		display: none;
+	}
+	#my_livebetteru{
+		display: block;
+	}
+	#my_livebetteru.hide{
+		display: none;
+	}
+</style>
+
+ <div id="snapshots_button" class="my_snapshots" style="color:white; background-color: #0071ce; border-radius:5px; left:45%; width: 110px; cursor:pointer; position:fixed; z-index:99999; text-align:center;" onclick="openNav()"><center>My Snapshots &#8595;</center></div>
+
+<div id="mySidenav" class="sidenav">
+
+	
+ 
+<div class="container">
+ <div class="button_slider">
+	<span style="font-size: 14px; font-weight: bold;">View Snapshot Ticker</span>&nbsp;&nbsp;
+	<label class="switch">
+  <input type="checkbox" onclick="toggleNav()">
+  <span class="slider round"></span>
+</label>
+	
+	</div> 
+   
+<!--  <a href="https://github.com/rtpHarry/Bootstrap3-ShowManySlideOneCarousel">this code sample</a>   -->
+<div class="row">
+   <div class="col-md-12">
+      <div class="carousel carousel-showmanymoveone slide" id="carousel-tilenav" data-interval="false">
+         <div class="carousel-inner">
+            <div class="item active">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_paystub">
+				  <div class="container_box">
+				   <p>My Paystub</p>
+                  <div class="see_more"> <a href="#">See More</a></div>
+					  </div>
+				   <div class="container_box_details">
+				   <p>My Paystub</p>
+					   <span class="api_res paystub"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+				  
+               </div>
+            </div>
+           <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_401k">
+				   <div class="container_box"> 
+                  <p>My 401K</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My 401K</p>
+					   <span class="api_res 401k"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+				  
+               </div>
+            </div>
+			 <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_schedule">
+				   <div class="container_box"> 
+                  <p>My Schedule</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My Schedule</p>
+					    <span class="api_res schedule"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+				  
+               </div>
+            </div>
+            <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_pto">
+				    <div class="container_box">
+                  <p>My PTO</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My PTO</p>
+					    <span class="api_res pto"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_team">
+				    <div class="container_box">
+                  <p>My Team</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My Team</p>
+					    <span class="api_res team"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+               </div>
+            </div>
+            
+            <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_totalrewards">
+				    <div class="container_box">
+                  <p>My Total Rewards</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My Total Rewards</p>
+					    <span class="api_res rewards"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+               </div>
+            </div>
+            <div class="item">
+               <div class="col-xs-12 col-sm-6 col-md-2 my_livebetteru">
+				    <div class="container_box">
+                  <p>My Live Better U</p>
+				   <div class="see_more"> <a href="#">See More</a></div>
+				   </div>
+				   <div class="container_box_details">
+				   <p>My Live Better U</p>
+					    <span class="api_res livebetteru"></span>
+					   <div class="see_more_details"> <a href="#">See More</a></div>
+					  </div>
+               </div>
+            </div>
+            
+         </div>
+         <a class="left carousel-control" href="#carousel-tilenav" data-slide="prev" style="color:#0071ce !important;"><</a>
+         <a class="right carousel-control" href="#carousel-tilenav" data-slide="next" style="color:#0071ce !important;">></i></a>
+      </div>
+   </div>
+</div>
+
+   
+</div>	
+	
+<!--Internal collapse snapsht
+<div class="my_snapshots" style="color:white; background-color: #0071ce; border-radius:5px; margin:auto; width: 110px; cursor:pointer; margin-top: 2%;" onclick="closeNav()"><center>My Snapshots &#8593;</center></div>
+</div>
+-->	
+
+
+
+
+
+
+
+ 
+
+<script>
+
+
+	
+function openNav() { 
+
+
+	var b = document.getElementById("mySidenav");
+	b.className ="show";
+	var c = document.getElementById("snapshots_button");
+	c.className ="show";
+	document.getElementById("snapshots_button").setAttribute( "onClick", "closeNav()" );
+	document.getElementById("snapshots_button").innerHTML="My Snapshots &#8593";
+}
+
+function closeNav() {
+
+var b = document.getElementById("mySidenav");
+	b.className ="hidde";
+	var c = document.getElementById("snapshots_button");
+	c.className ="hidde";
+document.getElementById("snapshots_button").setAttribute( "onClick", "openNav()" );
+	document.getElementById("snapshots_button").innerHTML="My Snapshots &#8595";
+}
+
+//show or hide snapshot components-----TO BE WORKED UPON- CHANGE TO CLASS NAME AND LOOP
+	
+	function hide_my_paystub() {
+	var x = document.getElementsByClassName("my_paystub"); 
+    for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	
+	}
+	function show_my_paystub() {
+	var x = document.getElementsByClassName("my_paystub"); 
+    for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	
+	}
+	
+	function hide_my_401k() {
+	var x = document.getElementsByClassName("my_401k");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_401k() {
+	var x = document.getElementsByClassName("my_401k");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+	
+	function hide_my_schedule() {
+	var x = document.getElementsByClassName("my_schedule");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_schedule() {
+	var x = document.getElementsByClassName("my_schedule");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+	
+	function hide_my_pto() {
+	var x = document.getElementsByClassName("my_pto");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_pto() {
+	var x = document.getElementsByClassName("my_pto");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+	
+	function hide_my_team() {
+	var x = document.getElementsByClassName("my_team");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_team() {
+	var x = document.getElementsByClassName("my_team");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+	
+	function hide_my_totalrewards() {
+	var x = document.getElementsByClassName("my_totalrewards");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_totalrewards() {
+	var x = document.getElementsByClassName("my_totalrewards");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+	
+	function hide_my_livebetteru() {
+	var x = document.getElementsByClassName("my_livebetteru");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="none"; 
+    }
+	}
+	function show_my_livebetteru() {
+	var x = document.getElementsByClassName("my_livebetteru");
+	for(var i = 0; i < x.length; i++){
+        x[i].style.display="block"; 
+    }
+	}
+//Carousel scripts
+	
+(function(){
+  $('.carousel-showmanymoveone .item').each(function(){
+    var itemToClone = $(this);
+
+    for (var i=1;i<6;i++) {
+      itemToClone = itemToClone.next();
+
+      // wrap around if at end of item collection
+      if (!itemToClone.length) {
+        itemToClone = $(this).siblings(':first');
+      }
+
+      // grab item, clone, add marker class, add to collection
+      itemToClone.children(':first-child').clone()
+        .addClass("cloneditem-"+(i))
+        .appendTo($(this));
+    }
+  });
+}());
+
+
+
+    function show_details() {
+      var divsToHide = document.getElementsByClassName("container_box_details"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+        
+        divsToHide[i].style.display = "block"; // depending on what you're doing
+    }
+          var divsToHide2 = document.getElementsByClassName("container_box"); //divsToHide is an array
+    for(var i = 0; i < divsToHide2.length; i++){
+        
+        divsToHide2[i].style.display = "none"; // depending on what you're doing
+    } 
+	        
+	//Insert api data.....................
+	
+	var wage = document.getElementsByClassName("paystub"); 
+    for(var i = 0; i < wage.length; i++){
+        wage[i].innerHTML=wage_response_all; 
+    }
+		
+	var contrib = document.getElementsByClassName("401k"); 
+    for(var i = 0; i < contrib.length; i++){
+        contrib[i].innerHTML=sessionStorage.getItem("k_value"); 
+    }
+	
+	//Insert api data End.....................	
+	
+	}
+
+    function hide_details() {
+      var divsToHide = document.getElementsByClassName("container_box_details"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+        
+        divsToHide[i].style.display = "none"; // depending on what you're doing
+    }
+		     var divsToHide2 = document.getElementsByClassName("container_box"); //divsToHide is an array
+    for(var i = 0; i < divsToHide2.length; i++){
+        
+        divsToHide2[i].style.display = "block"; // depending on what you're doing
+    }
+      document.getElementById("wage").innerHTML="";
+                    }
+
+    function toggleNav() {
+		var divsToHide3 = document.getElementsByClassName("container_box_details");
+     if ( divsToHide3[i].style.display === "none"){
+		  show_details();
+	 }
+		
+		else if ( divsToHide3[i].style.display === ""){
+			show_details();
+		}
+		
+		
+		else{
+			 hide_details();
+		}
+    }
+//Benefits API-----------------------------------------------------------------------------------------------------------------------
+
+//Get Auth Token
+ setTimeout(function() {	
+var benapitoken;
+var jsonStr = JSON.parse(atob(document.cookie.match('adp_user_profile=([^\\s,;]*)')[1]));
+var win = "218971406" //jsonStr["wm-IdentificationNumber"];
+var url = "https://benefits-coverage-dev.walmart.com/api/wmtbenefits/coverages/"+win+"?isBoss=False";
+ 
+ 
+ 
+var settings = {
+  "url": "https://benefits-auth-dev.walmart.com/api/wmtbenefits/benAuthToken",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+"winNbr": win
+  },
+};
+ 
+$.ajax(settings).done(function (response) {
+  response_all = response;
+benapitoken = response.message;
+   console.log(response);
+ 
+ 
+});
+
+	// Pay wage
+ setTimeout(function() {				// Added session timeout 2sec delay	
+var settings = {
+  "url": "https://benefits-optionrate-dev.walmart.com/api/wmtbenefits/currentWage/218971406/2",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+    "ben-api-token": benapitoken,
+    "winNbr": win,
+    "payFrequencyCode": 2
+  },
+};
+
+$.ajax(settings).done(function (wage_response) {
+  wage_response_all = wage_response;
+   console.log(wage_response);
+});
+	
+	 
+	}, 2000);
+ 
+//Coverage Service - 401K %
+setTimeout(function() {				// Added session timeout 2sec delay		
+var settings = {
+  "url": url,
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+    "ben-api-token": benapitoken
+  },
+};
+
+	
+
+$.ajax(settings).done(function (response401) {
+  response401_all = response401;
+   console.log(response401);
+ var k_rate= (response401_all[new Date().getFullYear()][10].rateFor401K)/100;
+		var k_value= k_rate*wage_response_all;
+		console.log(k_value);
+ sessionStorage.setItem("k_value", k_value);
+});	
+	}, 2500);
+
+	}, 2000);
+</script>
